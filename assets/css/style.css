@@ -1,0 +1,15 @@
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+    background: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp") center/cover no-repeat;
+
+
+}
