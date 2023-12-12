@@ -18,13 +18,39 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/* Header */
+
+.header {
+    font-family: "Gloria Hallelujah",
+        cursive;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #ff0000;
+    
+}
+
 /* Start button styles */
+
+.start-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.start-btn button {
+    font-size: 30px;
+}
 
 .start-btn button{
     padding: 0.6em 2em;
     border: none;
     outline: none;
-    color: rgb(255, 255, 255);
+    color: #ff0000;
     background: #111;
     cursor: pointer;
     position: relative;
@@ -32,18 +58,6 @@ body {
     border-radius: 10px;
     }
 
-    .start-btn {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-    }
-
-    .start-btn button {
-        font-size: 30px;
-    }
-    
     .start-btn button:before {
         content: "";
         background: linear-gradient(45deg,
