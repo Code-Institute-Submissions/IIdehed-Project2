@@ -31,6 +31,18 @@ body {
     z-index: 0;
     border-radius: 10px;
     }
+
+    .start-btn {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .start-btn button {
+        font-size: 30px;
+    }
     
     .start-btn button:before {
         content: "";
