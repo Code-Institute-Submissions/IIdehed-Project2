@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lato:wght@300&display=swap');
+
 /* Global styles */
 
 * {
@@ -10,6 +13,9 @@ html,
 body {
     height: 100%;
     background: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp") center/cover no-repeat;
+    font-family: "Gloria Hallelujah",
+        cursive;
+    font-family: "Lato", sans-serif;
 
 
 }
