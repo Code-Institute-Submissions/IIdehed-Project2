@@ -24,7 +24,7 @@ body {
     font-family: "Gloria Hallelujah",
         cursive;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 70px;
@@ -46,11 +46,6 @@ body {
 
 /* How to play section */
 
-hr {
-    border-top: #191919;
-    border-radius: 10px;
-}
-
 h2 {
     text-align: center;
     font-family: "Gloria Hallelujah",
@@ -60,19 +55,20 @@ h2 {
 ul {
     list-style-type: none;
     padding-left: 0;
-    font-family: "Lato",
-        sans-serif;
+    font-family: "Gloria Hallelujah",
+        cursive;
+    
 }
 
 .quiz-info-container {
     position:absolute;
+    height: auto;
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: baseline;
     margin-top: 30px;
     margin-bottom: 10px;
-    display:flex;
     justify-content: space-between;
     flex-direction: column;
 
@@ -93,8 +89,10 @@ nav {
 
 .start-btn {
     position:absolute;
-    bottom: 10%;
+    top: 100%;
+    bottom: 0;
     left: 50%;
+    margin-top: 20px;
     margin-bottom: 20px;
     transform: translate(-50%, -50%);
 
