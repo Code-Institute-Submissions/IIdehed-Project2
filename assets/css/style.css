@@ -38,8 +38,8 @@ body {
 }
 
 #htp-info {
-    align-items: baseline;
     color:#111;
+    justify-content: space-between;
 
 
 }
@@ -51,10 +51,10 @@ body {
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    flex-direction: column;
     align-items: baseline;
     margin-bottom: 30px;
     display:flex;
+    justify-content: space-between;
 
 }
 
