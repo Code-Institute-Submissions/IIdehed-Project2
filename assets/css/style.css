@@ -46,6 +46,11 @@ body {
 
 /* How to play toggle section */
 
+ul {
+    list-style-type: none;
+    padding-inline-start: 0%;
+}
+
 .info-quiz {
     position: absolute;
     top: 47%;
