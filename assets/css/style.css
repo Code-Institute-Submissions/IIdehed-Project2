@@ -9,15 +9,13 @@
     box-sizing: border-box;
 }
 
-html,
 body {
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp") center/cover no-repeat;
     font-family: "Gloria Hallelujah",
         cursive;
     font-family: "Lato", sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Header */
@@ -34,18 +32,29 @@ body {
 
 }
 
-main {
-    flex: 1 0 auto;
+.text-center {
+    text-align: center;
+    color:#e9e9ea
+}
+
+#htp-info {
+    align-items: baseline;
+    color:#111;
+
+
 }
 
 /* How to play toggle section */
 
 .info-quiz {
     position: absolute;
-    top: 10%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 30px;
+    display:flex;
 
 }
 
@@ -59,26 +68,27 @@ main {
 
 .nav-toggle-label {
     font-size: 2rem;
-    color: #e9e9ea;
+    color: #0c0c0d;
 
 }
 
 nav {
     position: absolute;
-    background-color: #1c1b23;
+    background-color: #ed3939;
     width: 100%;
     left: 0;
     box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
     display: none;
     top: 99%;
+    border-radius: 10px;
 }
 
 /* Start button styles */
 
 .start-btn {
     position:absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     margin-bottom: 20px;
     transform: translate(-50%, -50%);
@@ -160,14 +170,17 @@ nav {
     border-radius: 10px;
 }
 
-.info-quiz {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: baseline;
 
-}
-nav {
-    top: 100%;
+footer p{
+    color: #ff0000;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    text-align: center;
+    position: fixed;
+    margin: 0 auto 10px auto;
+    font-size: 30px;
+    font-family: "Gloria Hallelujah",
+        cursive;
 }
