@@ -17,6 +17,7 @@
     background-position: 100%;
     padding: 20px 10% 0 10%;
     flex-grow: 1;
+    flex: 1 0 auto;
 }
 
 
@@ -190,6 +191,21 @@ nav {
 }
 
 /* levels difficulty Section */
+
+.quiz-info-container.activInfo {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+ }
+
+
+.levels-container.activeInfo {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 .levels-container {
     position: absolute;
@@ -527,6 +543,15 @@ footer p {
         cursive;
 }
 
+@media screen and (max-width: 320px) {
+    #bodyimage {
+        height: 100%;
+        width: 100%;
+        background-size: auto;
+        background-position: bottom;
+        background-size: cover;
+    }
+}
 
 @media screen and (max-width: 600px) {
     
@@ -556,5 +581,6 @@ footer p {
         width: 100%;
         background-size:auto;
         background-position: bottom;
+        background-size: cover;
     }
 }
