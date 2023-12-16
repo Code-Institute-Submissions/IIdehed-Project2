@@ -9,14 +9,26 @@
     box-sizing: border-box;
 }
 
+
+#bodyimage{
+    background-repeat: no-repeat;
+    background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
+    background-size: cover;
+    background-position: 100%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+
 body {
-    width: 100vw;
-    height: 100vh;
-    background: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp") center/cover no-repeat;
+    min-height: 100vh;
     font-family: "Gloria Hallelujah",
         cursive;
     font-family: "Lato", sans-serif;
     font-family: 'Preahvihear', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
 }
 
 /* Header */
@@ -24,7 +36,7 @@ body {
 #header {
     font-family: "Gloria Hallelujah",
         cursive;
-    position: absolute;
+    position: fixed;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -68,8 +80,11 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: baseline;
-    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
     margin-bottom: 10px;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
 
@@ -510,4 +525,36 @@ footer p {
     font-size: 30px;
     font-family: "Gloria Hallelujah",
         cursive;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+
+    .quiz-info-container {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        width:80%;
+    }
+
+    #header {
+        font-family: "Gloria Hallelujah",
+                cursive;
+        position:absolute;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        color: #ff0000;
+    }
+
+    #bodyimage {
+        height:100%;
+        width: 100%;
+        background-size:auto;
+        background-position: bottom;
+    }
 }
