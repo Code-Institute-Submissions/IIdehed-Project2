@@ -2,7 +2,6 @@
 const infoContainer = document.querySelector(".quiz-info-container ");
 const startButton = document.querySelector(".start-btn button");
 const continueBtn = document.querySelector(".buttons .continuebtn")
-const levelsContainer = document.querySelector(".levels-container")
 const quizContainer = document.querySelector(".quiz-game-container");
 const playAgainbutton = document.querySelector(".btn .play-again-btn");
 const scoreSection = document.querySelector("score-section");
@@ -18,5 +17,5 @@ startButton.onclick = () => {
 
 continueBtn.onclick = () => {
     infoContainer.classList.remove("activeInfo"); /* hide the info section */
-    quizContainer.classList.add("activeQ"); /* Show the quiz section */
+    quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
 }
