@@ -6,6 +6,7 @@ const quizContainer = document.querySelector(".quiz-game-container");
 const playAgainbutton = document.querySelector(".btn .play-again-btn");
 const scoreSection = document.querySelector("score-section");
 const OptionsList = document.querySelector(".answers-options-list");
+const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
 
@@ -21,10 +22,13 @@ continueBtn.onclick = () => {
     quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
     getQuestions(0);
     questionCounter(1);
+    startTimer(10);
 };
 
 let questionCount = 0;
 let questionNumb = 1;
+let timeCount;
+let timeValue = 10;
 
 
 const nextButton = quizContainer.querySelector(".next-button");
@@ -36,6 +40,8 @@ nextButton.onclick = () => {
         questionNumb++;
         getQuestions(questionCount);
         questionCounter(questionNumb);
+        clearInterval(timeCount);
+        startTimer(timeValue);
     }
     else {
         console.log("Questions Completed!");
@@ -64,6 +70,7 @@ let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>
 
 
 function answersSelected(answer) {
+    clearInterval(timeCount);
     let UserAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
     let allOptions = OptionsList.children.length;
@@ -84,18 +91,39 @@ function answersSelected(answer) {
             }
         }
 
-        /* Disabel all options if user pressed an answer */
-        for (let i = 0; i < allOptions; i++) {
-            OptionsList.children[i].classList.add("disabled");
+    }
 
-        }
-
+    /* Disabel all options if user pressed an answer */
+    for (let i = 0; i < allOptions; i++) {
+        OptionsList.children[i].classList.add("disabled");
 
     }
+
+
+}
+
+
+function startTimer(time){
+    timeCount = setInterval(timer, 1000);
+    function timer(){
+        timeCounter.textContent = time;
+        time--;
+        if(time < 0) {
+            clearInterval(timeCount);
+        }
+    }
+
+}
+
+
+
+
+
+
 
 
 function questionCounter(index) {
     const bottomCounter = quizContainer.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
-} }
+ }
