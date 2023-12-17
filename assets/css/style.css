@@ -50,6 +50,7 @@ main {
 
 /* Welcome page with start button */
 
+
 .start-welcome {
     position: absolute;
     top: 50%;
@@ -226,8 +227,13 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
+    min-height: 300px;
     width: 550px;
-    background: transparent;
+    background-color:#ed3939;
+    border-radius: 8px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
     pointer-events: none;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
@@ -239,12 +245,13 @@ nav {
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: 600;
-    color:#ff0000;
+    color:#090909;
 }
 .levels-container .levelsd {
     display:flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 20px;
     
 }
 
@@ -279,6 +286,13 @@ nav {
 }
 
 /* Quiz Section */
+
+.quiz-game-container.activeQuiz {
+    z-index: 5;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
 
 .quiz-game-container{
     position: absolute;
