@@ -29,7 +29,7 @@ body {
 #header {
     font-family: "Gloria Hallelujah",
         cursive;
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     top: 15%;
     left: 50%;
@@ -40,12 +40,13 @@ body {
 }
 
 main {
+    min-height: 100vh;
     background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     flex: 1 0 auto;
-    margin-top: 47px;
+    
 }
 
 /* Welcome page with start button */
@@ -220,70 +221,6 @@ nav {
     margin-top: 10px;
 }
 
-
-/* levels difficulty Section */
-
-.levels-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-height: 300px;
-    width: 550px;
-    background-color:#ed3939;
-    border-radius: 8px;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    pointer-events: none;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.9);
-
-}
-
-.levels-container .levels-text {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 30px;
-    font-weight: 600;
-    color:#090909;
-}
-.levels-container .levelsd {
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    
-}
-
-.easy,
-.medium,
-.hard {
-    background: #ff0000;
-    border-radius: 5px;
-    border: 1px solid #000;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
-                0 8px 16px 0 rgba(0, 0, 0, 0.1);
-}
-
-.easy,
-.medium,
-.hard {
-    font-size: 25px;
-    width: 100px;
-    height: 50px;
-}
-
-.hard:hover{
-    background: #b50101;
-}
-
-.medium:hover{
-    background: #b50101;
-}
-
-.easy:hover{
-    background: #b50101;
-}
 
 /* Quiz Section */
 
@@ -562,6 +499,7 @@ nav {
 
 /* Footer Styles */
 
+
 footer p {
     background-color: transparent;
     color: #ff0000;
@@ -574,11 +512,13 @@ footer p {
     font-size: 30px;
     font-family: "Gloria Hallelujah",
         cursive;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 600px) {
     main {
-        margin-top: 47px;
+        
+
     }
     .quiz-info-container {
         display:flex;
@@ -599,4 +539,45 @@ footer p {
         font-size: 30px;
         color: #ff0000;
     }
+
+        .quiz-game-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .result-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 80%;
+        }
+
+        .question-text span{
+            font-size: 10px;
+            padding:0px;
+            
+        }
+
+        .quiz-game-container .timer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 8px;
+        }
+
+        .quiz-game-container .time-header {
+            padding: 0 10px;
+        }
+        .quiz-game-container .section-question {
+            padding: 15px 20px 10px 20px;
+        }
 }
