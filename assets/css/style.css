@@ -367,13 +367,17 @@ nav {
 .section-question .answers-options-list .answers.correct{
     color: #05ca47;
     border-color: #c2f3d2;
-    background: #d4edda;   
+    background: #82f89e;   
 }
 
 .section-question .answers-options-list .answers.incorrect {
     color: #c40903;
-    border-color: #f5988c;
-    background: #fcdfd5;
+    border-color: #fdc6be;
+    background: #fb8383;
+}
+
+.section-question .answers-options-list .answers.disabled {
+    pointer-events: none;
 }
 
 .quiz-game-container .question-footer {
