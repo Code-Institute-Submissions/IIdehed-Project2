@@ -129,7 +129,7 @@ const questions = [
     /* Question 10 */
 
     {
-        numb:9,
+        numb:10,
         question: "Michael Myers' mask is actually a mask for what 'Star Trek' character?",
         answer:"James T. Kirk",
         options: [
