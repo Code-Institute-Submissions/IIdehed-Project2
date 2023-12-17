@@ -59,6 +59,9 @@ function getQuestions(index) {
     }
 }
 
+let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
+let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>';
+
 
 function answersSelected(answer) {
     let UserAnswer = answer.textContent;
@@ -67,14 +70,17 @@ function answersSelected(answer) {
     if (UserAnswer == correctAnswer) {
         console.log("Answer is Correct!");
         answer.classList.add("correct");
+        answer.insertAdjacentHTML("beforeend", checkIcon);
     }
     else {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong!");
+        answer.insertAdjacentHTML("beforeend", crossIcon);
 
         for (let i = 0; i < allOptions; i++) {
             if (OptionsList.children[i].textContent == correctAnswer) {
                 OptionsList.children[i].setAttribute("class", "answers correct");
+                OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
             }
         }
 
@@ -92,4 +98,4 @@ function questionCounter(index) {
     const bottomCounter = quizContainer.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
-}
+} }
