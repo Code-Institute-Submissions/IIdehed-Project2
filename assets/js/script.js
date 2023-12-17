@@ -42,6 +42,7 @@ nextButton.onclick = () => {
         questionCounter(questionNumb);
         clearInterval(timeCount);
         startTimer(timeValue);
+        nextButton.style.display = "none";
     }
     else {
         console.log("Questions Completed!");
@@ -98,6 +99,10 @@ function answersSelected(answer) {
         OptionsList.children[i].classList.add("disabled");
 
     }
+
+    nextButton.style.display = "block";
+
+
 
 
 }
