@@ -44,7 +44,7 @@ nextButton.onclick = () => {
 /* Getting questions and options*/
 function getQuestions (index){
     const questionText = document.querySelector(".question-text");
-    const OptionsList = document.querySelector(".anwers-options-list");
+    const OptionsList = document.querySelector(".answers-options-list");
     let questionName = "<span>" + questions[index].numb + ". " + questions[index].question +"</span>";
     let OptionsText = '<div class="answers">'+ questions[index].options[0]+'<span></span></div>'
         +  '<div class="answers">'+ questions[index].options[1]+'<span></span></div>'
@@ -58,6 +58,22 @@ function getQuestions (index){
         
     }
 }
+
+
+function answersSelected(answer) {
+    let UserAnswer = answer.textContent;
+    let correctAnswer = questions[questionCount].answer;
+    if (UserAnswer == correctAnswer) {
+        console.log("Answer is Correct!");
+        answer.classList.add("correct");
+    }
+    else{
+        answer.classList.add("incorrect");
+        console.log("Answer is Wrong!");
+    }
+    
+}
+
 
 function questioncounter(index){
     const bottomCounter = quizContainer.querySelector(".total-questions");
