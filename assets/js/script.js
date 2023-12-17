@@ -18,4 +18,14 @@ startButton.onclick = () => {
 continueBtn.onclick = () => {
     infoContainer.classList.remove("activeInfo"); /* hide the info section */
     quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
+    getQuestions();
+}
+
+let couestionCount = 0
+
+/* Getting questions and options*/
+function getQuestions (){
+    const questionText = document.querySelector(".question-text");
+    let questionName = "<span>" + questions[0].question +"</span>";
+    questionText.innerHTML = questionName;
 }
