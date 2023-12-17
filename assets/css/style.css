@@ -153,6 +153,10 @@ main {
 
 /* How to play section */
 
+.continuebtn {
+    margin-top: 20px;
+}
+
 .text-center {
     text-align: center;
     color: #e9e9ea
@@ -195,6 +199,13 @@ ul {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
 
+}
+
+.quiz-info-container.activeInfo {
+    z-index: 5;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 nav {
@@ -423,8 +434,12 @@ nav {
     padding-left: 0px;
 }
 
-.question-footer .next-button {
-    background-color: #b81515;
+ .next-button ,
+ .continuebtn {
+    font-family: 'Preahvihear',
+        sans-serif;
+    background-color: #131010;
+    color:#ff0000;
     padding: 0 13px;
     height: 40px;
     font-size: 17px;
@@ -570,5 +585,3 @@ footer p {
         font-size: 30px;
         color: #ff0000;
     }
-
-   
