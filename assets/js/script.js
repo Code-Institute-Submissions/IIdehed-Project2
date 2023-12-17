@@ -9,7 +9,6 @@ const scoreSection = document.querySelector("score-section");
 
 /* Show Level section if startbutton is pressed */
 startButton.onclick = () => {
-    levelsContainer.classList.add("activeInfo"); /* Show level section if pressed */
-    infoContainer.classList.remove("activeInfo"); /*Hide the info section */
+    infoContainer.classList.add("activeInfo"); /* Show level section if pressed */
 }
 

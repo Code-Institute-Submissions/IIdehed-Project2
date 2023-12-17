@@ -10,17 +10,6 @@
 }
 
 
-#bodyimage{
-    background-repeat: no-repeat;
-    background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
-    background-size: cover;
-    background-position: 100%;
-    padding: 20px 10% 0 10%;
-    flex-grow: 1;
-    flex: 1 0 auto;
-}
-
-
 body {
     min-height: 100vh;
     font-family: "Gloria Hallelujah",
@@ -28,8 +17,11 @@ body {
     font-family: "Lato", sans-serif;
     font-family: 'Preahvihear', sans-serif;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 0px;
+    flex-direction: column; 
+    background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header */
@@ -38,6 +30,7 @@ body {
     font-family: "Gloria Hallelujah",
         cursive;
     position: fixed;
+    background-color: transparent;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -46,66 +39,34 @@ body {
 
 }
 
-.text-center {
-    text-align: center;
-    color:#e9e9ea
+main {
+    background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 1 0 auto;
+    margin-top: 47px;
 }
 
-#htp-info {
-    color:#111;
-    justify-content: space-between;
+/* Welcome page with start button */
 
-
-}
-
-/* How to play section */
-
-h2 {
-    text-align: center;
-    font-family: "Gloria Hallelujah",
-        cursive;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-family: "Gloria Hallelujah",
-        cursive;
-    
-}
-
-.quiz-info-container {
-    position:absolute;
-    height: auto;
-    top: 47%;
+.start-welcome {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    align-items: baseline;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
 }
 
-nav {
-    background-color: #ed3939;
-    width: 100%;
-    left: 0;
-    box-shadow: 0 2px 2px #3a3a3a;
-    padding: 0 1rem;
-    top: 99%;
-    border-radius: 10px;
-    margin-top: 10px;
+.start-welcome h2  {
+    font-size: 25px;
+    color:#ff0000;
+
 }
 
 /* Start button styles */
 
 .start-btn {
-    position:absolute;
+    position: absolute;
     top: 100%;
     bottom: 0;
     left: 50%;
@@ -190,22 +151,65 @@ nav {
     border-radius: 10px;
 }
 
-/* levels difficulty Section */
+/* How to play section */
 
-.quiz-info-container.activInfo {
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
- }
-
-
-.levels-container.activeInfo {
-    z-index: 5;
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
+.text-center {
+    text-align: center;
+    color: #e9e9ea
 }
+
+#htp-info {
+    color: #111;
+    justify-content: space-between;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: "Gloria Hallelujah",
+        cursive;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: "Gloria Hallelujah",
+        cursive;
+    
+}
+
+.quiz-info-container {
+    position:absolute;
+    height: auto;
+    top: 47%;
+    left: 50%;
+    align-items: baseline;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+
+}
+
+nav {
+    background-color: #ed3939;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    padding: 0 1rem;
+    top: 99%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* levels difficulty Section */
 
 .levels-container {
     position: absolute;
@@ -530,32 +534,23 @@ nav {
 /* Footer Styles */
 
 footer p {
+    background-color: transparent;
     color: #ff0000;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
     z-index: 99;
     text-align: center;
     position: fixed;
-    margin: 0 auto 10px auto;
     font-size: 30px;
     font-family: "Gloria Hallelujah",
         cursive;
 }
 
-@media screen and (max-width: 320px) {
-    #bodyimage {
-        height: 100%;
-        width: 100%;
-        background-size: auto;
-        background-position: bottom;
-        background-size: cover;
-    }
-}
-
 @media screen and (max-width: 600px) {
-    
-
+    main {
+        margin-top: 47px;
+    }
     .quiz-info-container {
         display:flex;
         flex-direction: column;
@@ -576,11 +571,4 @@ footer p {
         color: #ff0000;
     }
 
-    #bodyimage {
-        height:100%;
-        width: 100%;
-        background-size:auto;
-        background-position: bottom;
-        background-size: cover;
-    }
-}
+   
