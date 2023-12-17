@@ -46,13 +46,13 @@ const questions = [
 
     {
         numb:4,
-        question: "What was the name of the infamous fishing boat used in the climatic shark hunt at the end of 'JAWS'?",
-        answer:"Orca",
+        question: "Which movie is often credited as forcing the MPAA to create the PG-13 rating?",
+        answer:"Gremlins",
         options: [
-            'Spellbound',
-            'Orca',
-            'High Tide', 
-            'Buoy O Buoy'
+            'The Thing',
+            'Evil Dead II',
+            'Gremlins', 
+            'Nightmare on Elm Street'
         ]
     }, 
 
@@ -88,13 +88,13 @@ const questions = [
 
     {
         numb:7,
-        question: "Before he was caught and burned to death by angry townspeople, Freddy Krueger was a serial killer known as the _________________ ?",
-        answer:"Springwood Slasher",
+        question: "What object is used to signify the gypsy curse in 'Drag Me To Hell'?",
+        answer:"A button",
         options: [
-            'Elm Street Murderer',
-            'Ohio State Stabber', 
-            'Springwood Slasher', 
-            'Kiddy Killer'
+            'A coin',
+            'A button', 
+            'A cross', 
+            'A doll'
         ]
     },
 
@@ -102,13 +102,13 @@ const questions = [
 
     {
         numb:8,
-        question: "What is the name of the mysterious hypnotic location that Chris finds himself in during 'Get Out'?",
-        answer:"The sunken place",
+        question: "Sometimes, dead is better.” Which horror movie is this famous quote from?",
+        answer:"Pet Semetary",
         options: [
-            'The tea cup', 
-            'The sunken place',
-            'The apple orchard', 
-            'The alternate world', 
+            'Pet Semetary', 
+            'Night of the Living Dead',
+            'Misery', 
+            'Creepshow', 
         ]
     },
 
@@ -116,13 +116,13 @@ const questions = [
 
     {
         numb:9,
-        question: "The Purge is about a 24-hour period where all crime is legal in America. How often does this happen?",
-        answer:"Once a year",
+        question: "Which classic Alfred Hitchcock horror film featured the iconic 'shower scene?'",
+        answer:"Psycho",
         options: [
-            'Once every six months', 
-            'Once a month', 
-            'Once every five years', 
-            'Once a year'
+            'The Birds', 
+            'Psycho', 
+            'Rear Window', 
+            'Frenzy'
         ]
     },
 

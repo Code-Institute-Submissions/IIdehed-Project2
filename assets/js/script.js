@@ -26,6 +26,6 @@ let couestionCount = 0
 /* Getting questions and options*/
 function getQuestions (){
     const questionText = document.querySelector(".question-text");
-    let questionName = "<span>" + questions[0].question +"</span>";
+    let questionName = "<span>" + questions[1].question +"</span>";
     questionText.innerHTML = questionName;
 }
