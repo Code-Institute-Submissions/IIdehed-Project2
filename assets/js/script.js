@@ -3,29 +3,30 @@ const infoContainer = document.querySelector(".quiz-info-container ");
 const startButton = document.querySelector(".start-btn button");
 const continueBtn = document.querySelector(".buttons .continuebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
-const playAgainbutton = document.querySelector(".btn .play-again-btn");
+const playAgainbutton = quizContainer.querySelector(".btn .play-again-btn");
 const scoreSection = document.querySelector("score-section");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
 
-
 /* Show Level section if startbutton is pressed */
-startButton.onclick = () => {
-    infoContainer.classList.add("activeInfo"); /* Show level section if pressed */
-};
+startButton.addEventListener('click', () => {
+    console.log("start button clicked");
+    infoContainer.classList.add('activeInfo');
+});
 
 
 
 
-continueBtn.onclick = () => {
-    infoContainer.classList.remove("activeInfo"); /* hide the info section */
-    quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
+continueBtn.addEventListener('click', () => {
+    console.log("continue button clicked");
+    infoContainer.classList.remove('activeInfo');
+    quizContainer.classList.add('activeQuiz');
     getQuestions(0);
     questionCounter(1);
     startTimer(10);
-};
+});
 
 
 
@@ -35,12 +36,12 @@ let timeCount;
 let timeValue = 10;
 let userScore = 0;
 
-
 const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
-restartQuiz.onclick = () => {
+restartQuiz.addEventListener('click', () => {
+    console.log("restart button clicked");
     quizContainer.classList.add("activeQuiz");
     resultContainer.classList.remove("activeResult");
     let questionCount = 0;
@@ -53,10 +54,11 @@ restartQuiz.onclick = () => {
     startTimer(timeValue);
     nextButton.style.display = "none";
 
-};
+});
 
 /* If next button is pressed */
-nextButton.onclick = () => {
+nextButton.addEventListener('click', () => {
+    console.log("nextbutton clicked");
     if (questionCount < questions.length - 1) {
         questionCount++;
         questionNumb++;
@@ -68,9 +70,11 @@ nextButton.onclick = () => {
     }
     else {
         console.log("Questions Completed!");
+        questionCount = 0;
+        questionNumb = 1;
         showResultContainer();
     }
-};
+});
 
 /* Getting questions and options*/
 function getQuestions(index) {
