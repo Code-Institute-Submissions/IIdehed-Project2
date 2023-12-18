@@ -29,9 +29,12 @@ let questionCount = 0;
 let questionNumb = 1;
 let timeCount;
 let timeValue = 10;
+let userScore = 0;
 
 
 const nextButton = quizContainer.querySelector(".next-button");
+const resultContainer = document.querySelector(".result-container");
+const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
 /* If next button is pressed */
 nextButton.onclick = () => {
@@ -46,6 +49,7 @@ nextButton.onclick = () => {
     }
     else {
         console.log("Questions Completed!");
+        showResultContainer();
     }
 };
 
@@ -76,6 +80,8 @@ function answersSelected(answer) {
     let correctAnswer = questions[questionCount].answer;
     let allOptions = OptionsList.children.length;
     if (UserAnswer == correctAnswer) {
+        userScore += 1;
+        console.log(userScore);
         console.log("Answer is Correct!");
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend", checkIcon);
@@ -108,12 +114,34 @@ function answersSelected(answer) {
 }
 
 
-function startTimer(time){
+function showResultContainer() {
+    infoContainer.classList.remove("activeInfo"); /* Hide the info Container */
+    quizContainer.classList.remove("activeQuiz"); /* Hide the quiz Container */
+    resultContainer.classList.add("activeResult");/* Show the result Container */
+    const scoreText = resultContainer.querySelector(".score");
+    if (userScore < 4) {
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. Better luck next time..</span>';
+        scoreText.innerHTML = scoreT;
+    }
+
+    else if (userScore >= 4 && userScore <= 6) {
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. You can do better!</span>';
+        scoreText.innerHTML = scoreT;
+    }
+
+    else if (userScore >= 7) {
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. That is more like it!</span>';
+        scoreText.innerHTML = scoreT;
+    }
+
+}
+
+function startTimer(time) {
     timeCount = setInterval(timer, 1000);
-    function timer(){
+    function timer() {
         timeCounter.textContent = time;
         time--;
-        if(time < 0) {
+        if (time < 0) {
             clearInterval(timeCount);
         }
     }
@@ -131,4 +159,4 @@ function questionCounter(index) {
     const bottomCounter = quizContainer.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
- }
+}

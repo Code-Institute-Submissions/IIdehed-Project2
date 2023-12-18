@@ -506,6 +506,13 @@ nav {
 
 /* Result Section */
 
+.result-container.activeResult {
+    z-index: 5;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .result-container {
     position: absolute;
     top: 50%;
@@ -538,6 +545,7 @@ nav {
 
 .result-container .score span {
     display: flex;
+    justify-content: space-between;
     margin: 10px 0;
     font-size: 19px;
 }
