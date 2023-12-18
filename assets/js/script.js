@@ -12,19 +12,21 @@ const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
 /* Show Level section if startbutton is pressed */
-startButton.addEventListener('click', function () {
-    infoContainer.classList.add('activeInfo');
-});
+startButton.onclick = () => {
+    infoContainer.classList.add("activeInfo"); /* Show level section if pressed */
+};
 
 
 
-continueBtn.addEventListener('click', () => {
-    infoContainer.classList.remove('activeInfo');
-    quizContainer.classList.add('activeQuiz');
+
+continueBtn.onclick = () => {
+    infoContainer.classList.remove("activeInfo"); /* hide the info section */
+    quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
     getQuestions(0);
     questionCounter(1);
     startTimer(10);
-});
+};
+
 
 
 let questionCount = 0;
