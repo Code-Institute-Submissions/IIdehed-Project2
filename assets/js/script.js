@@ -3,8 +3,6 @@ const infoContainer = document.querySelector(".quiz-info-container ");
 const startButton = document.querySelector(".start-btn button");
 const continueBtn = document.querySelector(".buttons .continuebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
-const playAgainbutton = quizContainer.querySelector(".btn .play-again-btn");
-const scoreSection = document.querySelector("score-section");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
@@ -139,7 +137,7 @@ function showResultContainer() {
     resultContainer.classList.add("activeResult");/* Show the result Container */
     const scoreText = resultContainer.querySelector(".score");
     if (userScore < 4) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. Better luck next time..</span>';
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. Is that all you got?</span>';
         scoreText.innerHTML = scoreT;
     }
 
