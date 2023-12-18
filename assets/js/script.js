@@ -36,6 +36,21 @@ const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
+restartQuiz.onclick = () => {
+    quizContainer.classList.add("activeQuiz");
+    resultContainer.classList.remove("activeResult");
+    let questionCount = 0;
+    let questionNumb = 1;
+    let timeValue = 10;
+    let userScore = 0;
+    getQuestions(questionCount);
+    questionCounter(questionNumb);
+    clearInterval(timeCount);
+    startTimer(timeValue);
+    nextButton.style.display = "none";
+    
+}
+
 /* If next button is pressed */
 nextButton.onclick = () => {
     if (questionCount < questions.length - 1) {
@@ -90,7 +105,8 @@ function answersSelected(answer) {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong!");
         answer.insertAdjacentHTML("beforeend", crossIcon);
-
+        
+        /* If incorred answer is pressed show the right answer */
         for (let i = 0; i < allOptions; i++) {
             if (OptionsList.children[i].textContent == correctAnswer) {
                 OptionsList.children[i].setAttribute("class", "answers correct");
@@ -103,13 +119,8 @@ function answersSelected(answer) {
     /* Disabel all options if user pressed an answer */
     for (let i = 0; i < allOptions; i++) {
         OptionsList.children[i].classList.add("disabled");
-
     }
-
     nextButton.style.display = "block";
-
-
-
 
 }
 
@@ -143,6 +154,20 @@ function startTimer(time) {
         time--;
         if (time < 0) {
             clearInterval(timeCount);
+
+            let correctAnswer = questions[questionCount].answer;
+            let allOptions = OptionsList.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if (OptionsList.children[i].textContent == correctAnswer) {
+                    OptionsList.children[i].setAttribute("class", "answers correct");
+                    OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
+                }
+            }
+            for (let i = 0; i < allOptions; i++) {
+                OptionsList.children[i].classList.add("disabled");
+            }
+            nextButton.style.display = "block";
         }
     }
 
