@@ -12,18 +12,20 @@ const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
 /* Show Level section if startbutton is pressed */
-startButton.onclick = () => {
-    infoContainer.classList.add("activeInfo"); /* Show level section if pressed */
-};
+startButton.addEventListener('click', function () {
+    infoContainer.classList.add('activeInfo');
+});
 
 
-continueBtn.onclick = () => {
-    infoContainer.classList.remove("activeInfo"); /* hide the info section */
-    quizContainer.classList.add("activeQuiz"); /* Show the quiz section */
+
+continueBtn.addEventListener('click', () => {
+    infoContainer.classList.remove('activeInfo');
+    quizContainer.classList.add('activeQuiz');
     getQuestions(0);
     questionCounter(1);
     startTimer(10);
-};
+});
+
 
 let questionCount = 0;
 let questionNumb = 1;
@@ -48,8 +50,8 @@ restartQuiz.onclick = () => {
     clearInterval(timeCount);
     startTimer(timeValue);
     nextButton.style.display = "none";
-    
-}
+
+};
 
 /* If next button is pressed */
 nextButton.onclick = () => {
@@ -105,7 +107,7 @@ function answersSelected(answer) {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong!");
         answer.insertAdjacentHTML("beforeend", crossIcon);
-        
+
         /* If incorred answer is pressed show the right answer */
         for (let i = 0; i < allOptions; i++) {
             if (OptionsList.children[i].textContent == correctAnswer) {
