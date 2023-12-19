@@ -680,11 +680,12 @@ footer p {
         margin-left: 10px;
         margin-right: 10px;
         width: 80%;
+        height: 80%;
     }
 
     .question-text span {
         font-size: 12px;
-        padding: 0px;
+        
 
     }
 
@@ -701,4 +702,40 @@ footer p {
         padding: 15px 20px 10px 20px;
     }
 
-}    
+    .quiz-game-container .question-footer .total-questions span {
+        display: flex;
+        user-select: none;
+        padding: 4px;
+    }
+
+    .answers-options-list .answers .icon {
+        height: 20px;
+        width: 20px;
+        border: 2px solid transparent;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 20px;
+        pointer-events: none;
+    }
+
+    .quiz-game-container .answers-options-list {
+        padding:1px 0;
+    }
+
+    .result-container .icon {
+        font-size: 100px;
+        margin-bottom: 8px;
+        color: #131010;
+    }
+
+    .result-container .score span {
+        font-size: 10px;
+        display:block;
+    }
+
+    .result-container .btn .play-again-btn {
+        margin-top: 1px;
+
+    }
+}

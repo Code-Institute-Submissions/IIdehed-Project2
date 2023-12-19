@@ -137,17 +137,17 @@ function showResultContainer() {
     resultContainer.classList.add("activeResult");/* Show the result Container */
     const scoreText = resultContainer.querySelector(".score");
     if (userScore < 4) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. Is that all you got?</span>';
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. Is that all you got?</span>';
         scoreText.innerHTML = scoreT;
     }
 
     else if (userScore >= 4 && userScore <= 6) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. You can do better!</span>';
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. You can do better!</span>';
         scoreText.innerHTML = scoreT;
     }
 
     else if (userScore >= 7) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>right. That is more like it!</span>';
+        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. That is more like it!</span>';
         scoreText.innerHTML = scoreT;
     }
 

@@ -116,13 +116,13 @@ const questions = [
 
     {
         numb:9,
-        question: "Which classic Alfred Hitchcock horror film featured the iconic 'shower scene?'",
-        answer:"Psycho",
+        question: "What is the name of the main character in 'The Evil Dead?'",
+        answer:"Ash",
         options: [
-            'The Birds', 
-            'Psycho', 
-            'Rear Window', 
-            'Frenzy'
+            'Ash', 
+            'Adam', 
+            'Freddy', 
+            'Johnny'
         ]
     },
 
