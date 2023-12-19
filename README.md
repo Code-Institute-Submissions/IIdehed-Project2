@@ -96,13 +96,6 @@ Returning Site Users
 
 ---
 
-## Images
-
----
-
-I used [Unsplash](https://unsplash.com/)  to find my images. Really easy website to use, loads of images you can choose from and it is free.
-I got my about me image from my phones photo library.
-
 ---
 
 ## Wireframes
@@ -125,12 +118,41 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 
 ---
 
+## Technologies used
+
+### Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML )
+- [CSS](https://en.wikipedia.org/wiki/CSS )
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Libraries & Frameworks
+
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome library](https://fontawesome.com/)
+- [Favicon](https://favicon.io/)
+
+### Tools
+
+- [Wireframes](https://whimsical.com/login)
+- [W3C HTML Validation Service](https://validator.w3.org/ )
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ )
+- [JSHint JavaScript Validator](https://jshint.com/ )
+- 
+
 ## Testing
 
-- I tested this weste in 4 different browsers : Safari , Google Chrome, Windowns Edge and Firefox.
-- I tested that all the navigation links works and take you to the right place.
-- I made sure that my navigation, header, about me page, contact me page are easily navigated and easy to read.
-- I tested that my form works with all the inputs and it is visble for the user.
+- I tested this weste in 3 different browsers : Safari , Google Chrome, Firefox. All worked with no problem.
+- Tested that the functions in the quiz works:
+  
+1. PLay button is taken you to the info section.
+2. The continue button takes you to the quiz area.
+3. When you press right/wrong answer the right color light up. And is shown the right answer even if wrong answer is pressed.
+4. The next button takes you to the next question.
+5. Question counter show the right number.
+6. Timer is working. Goes from 10sec to 0sec and stops when answer is pressed. Also resets when a new question is shown.
+7. When last question is answerd takes you to end of quiz section. Shows you how many right/wrong you had.
+8. Play again button takes you to the start of quiz. And resets the score.
 
 ---
 
@@ -150,25 +172,7 @@ Mobile
 
 Desktop
 
-![Desktop]()
-
-Contact me page Mobile
-
-![Contact me page](https://github.com/Idehed/P1/assets/146822758/eefaf8de-fa2f-4dbe-8fb2-31dcbbe0ae91)
-
----
-
-Home page desktops
-
-![Home page](https://github.com/Idehed/P1/assets/146822758/8284c79c-7959-4e72-8f0b-72d1c69709f1)
-
-About me page desktops
-
-![About me](https://github.com/Idehed/P1/assets/146822758/c8263432-5e01-45bb-bea2-81799f0509c0)
-
-Contact me page desktops
-
-![Contact me](https://github.com/Idehed/P1/assets/146822758/ca7b3e86-aa51-4e93-84ac-e6f6c4364dcd)
+![Desktop](https://github.com/Idehed/Project2/assets/146822758/d33f65dd-82ed-4cf4-b337-4e686ea62fef)
 
 ---
 
@@ -185,39 +189,21 @@ Contact me page desktops
 
 ## Credits
 
----
+ I got some of my code from this youtube video. And some inspiration:
 
-## Content
+- [Youtube.com](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=268s&ab_channel=CodingNepal)
+  
+I got my button from this website:
 
----
+- [cssbuttons.app](https://cssbuttons.app/)
+  
+Questions to the quiz I got from:
 
-- The "Why ice skating " content was take from this website [playkettering.org](https://www.playkettering.org/health-benefits-ice-skating/)
-- The text in the about me page I used chatgpt [chat.openai.com](https://chat.openai.com/)
-- Icons were taken from [fontawesome.com](https://fontawesome.com/search)
-- Fonts were taken from [google font](https://fonts.google.com/)
-- Form was copied from the [Love Running Project](https://github.com/Idehed/love-running)
+- [play.howstuffworks.com](https://play.howstuffworks.com/quiz/the-ultimate-horror-movie-quiz)
 
----
+Background image was taken from:
 
-### Code
-
----
-
-- I learned how to use the flexbox at [css-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- I learned about CSS image overlay at [imagekit.io](https://imagekit.io/blog/css-image-overlay/#image-overlay-effects-using-css)
-- Form was copied from the [Love Running Project](https://github.com/Idehed/love-running)
-- Button was created with the help at [stackoverflow.com](https://stackoverflow.com/)
-
-### Media
-
-- anton-photo.jpg was taken from my own phone photo library.
-- braden-barwich-yaAruHxQ9OQ-unsplash.webp is by Branden Barwich from [Unsplash](https://unsplash.com/)
-- mariah-hewines-s3BIuan-wjo-unsplash is by Maria Hewines from [Unsplash](https://unsplash.com/)
-- matthew-fournier-G971e4EFKtA-unsplash.webp is by Matthew Fournier from [Unsplash](https://unsplash.com/)
-- taylor-friehl-5tqaSa9bsSU-unsplash.webp is by Taylor Friehl from [Unsplash](https://unsplash.com/)
-- taylor-friehl-5tqaSa9bsSU-unsplash is by Taylor Friehl from [Unsplash](https://unsplash.com/)
-- weston-m-1QKC4PqKXzE-unsplash.webp is by Weston m from [Unsplash](https://unsplash.com/)
-- Favicon was created here in [Favicon.io](https://favicon.io/)
+- [Unsplash](https://unsplash.com/)
 
 ---
 
