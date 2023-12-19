@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 /* Get all the required elements */
 const infoContainer = document.querySelector(".quiz-info-container ");
 const startButton = document.querySelector(".start-btn button");
@@ -47,7 +49,6 @@ restartQuiz.addEventListener('click', () => {
     let questionCount = 0;
     let questionNumb = 1;
     let timeValue = 10;
-    let userScore = 0;
     getQuestions(questionCount);
     questionCounter(questionNumb);
     clearInterval(timeCount);
@@ -80,10 +81,12 @@ nextButton.addEventListener('click', () => {
 function getQuestions(index) {
     const questionText = document.querySelector(".question-text");
     let questionName = "<span>" + questions[index].numb + ". " + questions[index].question + "</span>";
-    let OptionsText = '<div class="answers">' + questions[index].options[0] + '<span></span></div>'
-        + '<div class="answers">' + questions[index].options[1] + '<span></span></div>'
-        + '<div class="answers">' + questions[index].options[2] + '<span></span></div>'
-        + '<div class="answers">' + questions[index].options[3] + '<span></span></div>';
+    let OptionsText = `
+    <div class="answers">${questions[index].options[0]}<span></span></div>
+    <div class="answers">${questions[index].options[1]}<span></span></div>
+    <div class="answers">${questions[index].options[2]}<span></span></div>
+    <div class="answers">${questions[index].options[3]}<span></span></div>
+`;
     questionText.innerHTML = questionName;
     OptionsList.innerHTML = OptionsText;
     const answers = OptionsList.querySelectorAll(".answers");
@@ -95,6 +98,8 @@ function getQuestions(index) {
 
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>';
+
+answersSelected();
 
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {

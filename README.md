@@ -1,8 +1,8 @@
-# GREATSKATE
+# Horrer Quiz
 
 ## Responsive Website
 
-![Responsiveness](https://github.com/Idehed/P1/assets/146822758/cf681d58-f23f-402f-b2a3-4ccf37bb3057)
+![Responsiveness](https://github.com/Idehed/Project2/assets/146822758/14e943b8-b636-48ac-a956-a5cf66f57e76)
 
 ---
 
@@ -10,14 +10,11 @@
 
 ---
 
-This project is mainly about learning how to skate on ice but also the fundamentals about how to play ice hockey. These lessons are for everyone, all ages!
-I am learning out 3 different lessons.
+Horrer Quiz is a question quiz that let's you show your skills in knowlegde about horrer movies.
+You will have 10 questions to answer and you have 4 different options. Choose the right answer before 
+the time runs out!
 
-- Beginners
-- Intermediate
-- Hockey
-
-[Click here to go to live website](https://idehed.github.io/P1/)
+[Click here to go to live website]()
 
 ---
 
