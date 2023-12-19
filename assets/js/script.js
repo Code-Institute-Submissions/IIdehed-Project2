@@ -12,13 +12,11 @@ import questions from './questions.js';
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
 startButton.addEventListener('click', () => {
-    console.log("start button clicked");
     infoContainer.classList.add('activeInfo'); /*Show info section */
 });
 
 /* Show Quiz section if pressed. Added eventlistner.Listen to if button is clicked */
 continueBtn.addEventListener('click', () => {
-    console.log("continue button clicked");
     infoContainer.classList.remove('activeInfo'); /*Hide info section */
     quizContainer.classList.add('activeQuiz'); /* Show quiz section */
     getQuestions(0);
@@ -38,7 +36,6 @@ const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
-    console.log("restart button clicked");
     quizContainer.classList.add("activeQuiz"); /* Show the quiz section again */
     resultContainer.classList.remove("activeResult"); /* Hide the result section*/
     let questionCount = 0;
@@ -89,7 +86,6 @@ function getQuestions(index) {
             answersSelected(this);
         });
     }
-
 }
 
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
@@ -104,13 +100,11 @@ function answersSelected(answer) {
     if (UserAnswer == correctAnswer) {
         userScore += 1;
         console.log(userScore);
-        console.log("Answer is Correct!");
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend", checkIcon);
     }
     else {
         answer.classList.add("incorrect");
-        console.log("Answer is Wrong!");
         answer.insertAdjacentHTML("beforeend", crossIcon);
 
         /* If incorred answer is pressed show the right answer */
@@ -172,7 +166,6 @@ function startTimer(time) {
             nextButton.style.display = "block";
         }
     }
-
 }
 
 /* Shows with question you are on and how many there are*/

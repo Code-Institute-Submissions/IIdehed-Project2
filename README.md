@@ -138,7 +138,7 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 
 - W3C CSS Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/2ce7b5fa-390e-47af-9439-7a02877769c3)
 - W3C HTML Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/4ce161d0-0070-46e0-baa8-b84a287c7bd6)
-- JSHint JavaScript Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/305edddc-5c50-4ba8-951a-a93be06f498c)
+- JSHint JavaScript Validator: [Result](https://github.com/Idehed/Greatskate-P1/assets/146822758/2cb39b8c-a726-41f3-ba34-a8a9301fcd6d)
 
 ---
 
@@ -174,7 +174,7 @@ Contact me page desktops
 
 ## Bugs
 
-- I got this errors when I ran the js code in g
+- I got this errors when I ran
 
 ---
 
