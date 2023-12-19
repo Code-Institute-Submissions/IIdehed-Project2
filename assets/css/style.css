@@ -17,7 +17,7 @@ body {
     font-family: "Lato", sans-serif;
     font-family: 'Preahvihear', sans-serif;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,9 +60,9 @@ main {
     transform: translate(-50%, -50%);
 }
 
-.start-welcome h2  {
+.start-welcome h2 {
     font-size: 25px;
-    color:#ff0000;
+    color: #ff0000;
 
 }
 
@@ -77,12 +77,13 @@ main {
     margin-bottom: 20px;
     transform: translate(-50%, -50%);
 
+
 }
 
 .start-btn button {
     font-size: 20px;
-    font-family: "Gloria Hallelujah",
-        cursive;
+    font-family: 'Preahvihear',
+        sans-serif;
 }
 
 .start-btn button {
@@ -230,12 +231,11 @@ ul {
     padding-left: 0;
     font-family: "Gloria Hallelujah",
         cursive;
-    
 }
 
 .quiz-info-container {
-    position:absolute;
-    height: auto;
+    position: absolute;
+    min-height: 100px;
     top: 47%;
     left: 50%;
     align-items: baseline;
@@ -261,13 +261,14 @@ ul {
 
 nav {
     background-color: #ed3939;
-    width: 100%;
+    min-width: 100%;
     left: 0;
     box-shadow: 0 2px 2px #3a3a3a;
     padding: 0 1rem;
     top: 99%;
     border-radius: 10px;
     margin-top: 10px;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -280,31 +281,32 @@ nav {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.quiz-game-container{
+.quiz-game-container {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 550px;
     background: #ff0000;
     border-radius: 8px;
-    margin-top:20px;
+    margin-top: 20px;
     pointer-events: none;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
 
 }
+
 .quiz-game-container .time-header {
     position: relative;
     z-index: 99;
-    min-height:60px;
-    padding:0 30px;
+    min-height: 60px;
+    padding: 0 30px;
     background: #ff0000;
-    display:flex;
-    align-items:baseline;
+    display: flex;
+    align-items: baseline;
     justify-content: space-between;
     border-radius: 5px 5px 0 0;
     box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
-    margin:5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
 
 }
 
@@ -325,7 +327,7 @@ nav {
     border: 1px solid #000;
     border-radius: 5px;
     padding: 8px;
-    margin-top:8px;
+    margin-top: 8px;
 }
 
 .quiz-game-container .timer .timer-text {
@@ -337,10 +339,10 @@ nav {
 .quiz-game-container .timer .timer-sec {
     font-size: 18px;
     font-weight: 600;
-    background:rgb(119, 25, 25);
-    height:30px;
-    width:45px;
-    color:#fff;
+    background: rgb(119, 25, 25);
+    height: 30px;
+    width: 45px;
+    color: #fff;
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
@@ -354,7 +356,7 @@ nav {
 
 }
 
-.quiz-game-container .answers-options-list{
+.quiz-game-container .answers-options-list {
     font-size: 17px;
     font-weight: 600;
 
@@ -371,7 +373,7 @@ nav {
     border-radius: 5px;
     padding: 8px 15px;
     margin-bottom: 15px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
@@ -380,7 +382,7 @@ nav {
 }
 
 .section-question .answers-options-list .answers:hover {
-    color:rgb(4, 4, 4);
+    color: rgb(4, 4, 4);
     background: #e9e9ea;
     border-color: #d6d6d7;
 }
@@ -403,7 +405,7 @@ nav {
 
 .answers-options-list .answers .icon.check {
     border-color: #05ca47;
-    color:#05ca47;
+    color: #05ca47;
     background: #d4edda;
 }
 
@@ -413,10 +415,10 @@ nav {
     background: #f8d7da;
 }
 
-.section-question .answers-options-list .answers.correct{
+.section-question .answers-options-list .answers.correct {
     color: #05ca47;
     border-color: #c2f3d2;
-    background: #82f89e;   
+    background: #82f89e;
 }
 
 .section-question .answers-options-list .answers.incorrect {
@@ -432,19 +434,19 @@ nav {
 .quiz-game-container .question-footer {
     width: 100%;
     height: 60px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
 }
 
-.quiz-game-container .question-footer .total-questions span{
-    display:flex;
+.quiz-game-container .question-footer .total-questions span {
+    display: flex;
     user-select: none;
 
 }
 
-.question-footer .total-questions span p{
+.question-footer .total-questions span p {
     font-weight: 700;
     padding: 0 5px;
 }
@@ -454,12 +456,12 @@ nav {
 }
 
 
- .next-button {
+.next-button {
     display: none;
     font-family: 'Preahvihear',
         sans-serif;
     background-color: #131010;
-    color:#ff0000;
+    color: #ff0000;
     padding: 0 13px;
     height: 40px;
     font-size: 17px;
@@ -531,12 +533,14 @@ nav {
     pointer-events: none;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(59, 59, 59);
 }
 
 .result-container .icon {
-   font-size: 130px;
-   margin-bottom: 15px;
-   color:rgb(241, 241, 241);
+    font-size: 130px;
+    margin-bottom: 15px;
+    color: #131010;
 }
 
 .result-container .finish-text {
@@ -551,14 +555,14 @@ nav {
     font-size: 19px;
 }
 
-.score span p{
+.score span p {
     padding: 0 4px;
     font-weight: 700;
 }
 
 .result-container .btn {
     display: flex;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 .result-container .btn .play-again-btn {
@@ -574,6 +578,7 @@ nav {
     animation: playagainbtnbounce 4s infinite;
     cursor: pointer;
 }
+
 @keyframes playagainbtnbounce {
 
     5%,
@@ -630,24 +635,25 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
-    
-    main {
-        margin-top: 30px;
+
+    footer p {
+        font-size: 20px;
+
     }
-    
+
+    nav {
+        padding: 0 7px;
+    }
+
     .quiz-info-container {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
-        width:80%;
+        width: 80%;
+        height: 80%;
     }
 
     #header {
         font-family: "Gloria Hallelujah",
-                cursive;
-        position:absolute;
+            cursive;
+        position: absolute;
         top: 8%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -655,44 +661,44 @@ footer p {
         color: #ff0000;
     }
 
-        .quiz-game-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 80%;
-        }
+    .quiz-game-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        height:80%;
+    }
 
-        .result-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-left: 10px;
-            margin-right: 10px;
-            width: 80%;
-        }
+    .quiz-game-container .answers-options-list {
+        font-size: 12px;
+    }
 
-        .question-text span{
-            font-size: 15px;
-            padding:0px;
-            
-        }
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 80%;
+    }
 
-        .quiz-game-container .timer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 80px;
-            height: 20px;
-            background: #fff;
-            border: 1px solid #000;
-            border-radius: 5px;
-            padding: 8px;
-        }
+    .question-text span {
+        font-size: 12px;
+        padding: 0px;
 
-        .quiz-game-container .time-header {
-            padding: 0 10px;
-        }
-        .quiz-game-container .section-question {
-            padding: 15px 20px 10px 20px;
-        }
-}
+    }
+
+    .quiz-game-container .timer {
+        width: 80px;
+        height: 35px;  
+    }
+
+    .quiz-game-container .time-header {
+        padding: 0 10px;
+    }
+
+    .quiz-game-container .section-question {
+        padding: 15px 20px 10px 20px;
+    }
+
+}    

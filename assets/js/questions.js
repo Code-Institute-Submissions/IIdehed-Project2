@@ -46,13 +46,13 @@ const questions = [
 
     {
         numb:4,
-        question: "Which movie is often credited as forcing the MPAA to create the PG-13 rating?",
-        answer:"Gremlins",
+        question: "What color is Freddy Kreuger's sweater?",
+        answer:"Red & Green",
         options: [
-            'The Thing',
-            'Evil Dead II',
-            'Gremlins', 
-            'Nightmare on Elm Street'
+            'Red & Black',
+            'Red & Brown',
+            'Green & Black', 
+            'Red & Green'
         ]
     }, 
 
