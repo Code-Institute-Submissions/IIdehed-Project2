@@ -65,6 +65,10 @@ main {
     color: #ff0000;
 
 }
+.text-center {
+    text-align: center;
+    color: #e9e9ea
+}
 
 /* Start button styles */
 
@@ -207,11 +211,6 @@ main {
     40% {
         transform: scale(1) rotate(0);
     }
-}
-
-.text-center {
-    text-align: center;
-    color: #e9e9ea
 }
 
 #htp-info {
@@ -634,6 +633,7 @@ footer p {
     margin-bottom: 5px;
 }
 
+/* Media Query */
 @media screen and (max-width: 600px) {
 
     footer p {
