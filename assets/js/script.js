@@ -7,6 +7,7 @@ const continueBtn = document.querySelector(".buttons .continuebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
+import questions from './questions.js';
 
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
@@ -79,19 +80,20 @@ function getQuestions(index) {
     <div class="answers">${questions[index].options[1]}<span></span></div>
     <div class="answers">${questions[index].options[2]}<span></span></div>
     <div class="answers">${questions[index].options[3]}<span></span></div>
-`;
+ `;
     questionText.innerHTML = questionName;
     OptionsList.innerHTML = OptionsText;
     const answers = OptionsList.querySelectorAll(".answers");
     for (let i = 0; i < answers.length; i++) {
-        answers[i].setAttribute("onclick", "answersSelected(this)");
+        answers[i].addEventListener("click", function () {
+            answersSelected(this);
+        });
     }
+
 }
 
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>';
-
-answersSelected();
 
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {

@@ -1,3 +1,5 @@
+
+
 const questions = [
 
     /* Question 1 */
@@ -140,12 +142,5 @@ const questions = [
         ]
     },
 
-
-    
-
-
-
-
-
 ]
-
+export default questions;

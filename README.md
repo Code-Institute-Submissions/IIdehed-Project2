@@ -11,7 +11,7 @@
 ---
 
 Horrer Quiz is a game that let's you show your skills in knowlegde about horrer movies.
-You will have 10 questions to answer and you have 4 different options. Choose the right answer before 
+You will have 10 questions to answer and you have 4 different options. Choose the right answer before
 the time runs out!
 
 [Click here to go to live website]()
@@ -24,16 +24,16 @@ the time runs out!
 
 New Site Users
 
-- I want to easy navigate though the website.
-- I want to understand what I am booking.
-- I want to be inspired.
-- I want to book a lesson that looks fun!
+- I want to understand what the buttons do.
+- I want to easy understand how to play the game.
+- I want to understand the questions.
+- I want to know witch answer is right even if I press wrong answer.
+- I want to know how many right and wrong answers I got.
   
 Returning Site Users
 
-- I want to make more bookings.
-- I want come back and learn more about Anton.
-- I want to read more about the benefits on why to skate.
+- I want to earn more knowledge about horrer movies.
+- I want to score better tan last time.
 
 ---
 
@@ -41,50 +41,60 @@ Returning Site Users
 
 ---
 
-### Navigation
-
-- Greatskate icon navigation is at the top left of the website and links you to the top of the page.
-- The other navigation are located on the top right : about me and contact me. They link to different webpages.
-- We have two book me navigation, one in home page and one in about me page. Both are linked to go to contact me page.
-- In the footer we have four navigation links: Facebook, instagram, twitter and youtube. These will take you to the website in a new tab.
-
----
-
-### **Home hero Image section**
+### **Home welcome page**
   
-![Home page](https://github.com/Idehed/love-running/assets/146822758/2de21d66-a15e-4e50-a5ed-57b16a44794b)
+![Welcome page](https://github.com/Idehed/Project2/assets/146822758/4b31ad38-729c-4191-9727-29966abd387a)
 
-The home page hero section is to capture the viewers eyes with the image of the person skating. How they dream to be able to skate like that in a place like that. The big header is to be more visible for the user. The menu is to the right of the header and is also very visible.
+- This first page is very simple.
+- It contains a header named Horrer Quiz and a welcome text to get the user to feel welcome.
+- It also contains a play button for users to press to start the quiz.
 
-### **Home Lessons section**
+### **Quiz info section**
 
-![Lessons](https://github.com/Idehed/love-running/assets/146822758/d6a5e5f0-bca1-4ce2-984a-56c099880ddc)
+![Quiz info](https://github.com/Idehed/Project2/assets/146822758/938c43fd-e39e-4901-a77f-5c74b1530b20)
 
-The lessons section is for people to see what kind of lessons they can choose from. A breif info about what you get is under the image in each lesson. A "book me" button is located under the lessons section for the user to press and then be linked to contact me page.
+- This section of the page is where the user understands how to play game.
+- The user looks at the instructions and know very clear on how to play.
+- An continue button is located belove the info text for users to continue to the game area.
 
-### **Home page footer**
+### **Quiz game section**
 
-![Footer](https://github.com/Idehed/love-running/assets/146822758/f96612bb-0c96-4b2e-b2de-9b61db0602df)
+![Quiz game area](https://github.com/Idehed/Project2/assets/146822758/cc12c81c-b383-489b-84f4-c8db081e61cb)
 
-Here the user can read about the benifits of skating.
-All the way down we have some social networks links.
+- This is the quiz section.
+- Here the user see the first question and they also have 4 different answers.
+- A timer is set on the top right corner of the quiz. The user will have 10 seconds on each question.
+- In the bottom left corner they have question counter that lets you know with question you are on.
+
+![Quiz game, after you pressed](https://github.com/Idehed/Project2/assets/146822758/146080fd-eaa8-464d-87f3-c2ca7be98cc2)
+
+- If the user pressed the wrong answer a red color appears and the right answer shows. To easy understand if I get right or wrong on that question.
+- Whenever an answer is pressed only then the next question button is shown.
+- If the timer runs out the user gets 0 points and the answers is disabled.
 
 ---
 
-### About me page
+### **End of game section**
 
-![About me](https://github.com/Idehed/love-running/assets/146822758/3acf8d8c-32ef-437b-9333-72394639d616)
+![End of quiz](https://github.com/Idehed/Greatskate-P1/assets/146822758/444c5b31-99de-41cc-ac00-1fbcd07bf1af)
 
-Here the user can read some info about me (Anton). So the user knows why they are going to choose me as a coach!
-There is also a "book me" button on this page that takes you to contact me page for easy navigation.
+- Here the user is shown there result of the quiz.
+- It show the " Your completed the quiz " text to let users know that the quiz is done.
+- Depends on how good you were different text is shown:
+  
+1. If Score < 4 ,Shows this text: " Is that all you got? ".
+
+2. If Score >= 4 && score <= 6 ,Shows this text: "You can do better!".
+
+3. If score >= 7 ,Shows this text: "That is more like it!".
+
+- The user also has a play again button to start the quiz over and maybe make a better score this time!
 
 ---
 
-### Contact me page
+## Design Choices
 
-![Contact me](https://github.com/Idehed/P1/assets/146822758/61231541-b793-4a3f-8f94-1e1110c448d8)
-
-In the contact me page we have a from for the user to fill in and choose what lesson they want to book. They will send it and then I will contact them about when im free to book.
+---
 
 ## Images
 
