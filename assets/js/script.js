@@ -104,10 +104,10 @@ answersSelected();
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {
     clearInterval(timeCount);
-    let UserAnswer = answer.textContent;
-    let correctAnswer = questions[questionCount].answer;
-    let allOptions = OptionsList.children.length;
-    if (UserAnswer == correctAnswer) {
+    if (answer && answer.textContent) {
+        let UserAnswer = answer.textContent;
+        let correctAnswer = questions[questionCount].answer;
+        let allOptions = OptionsList.children.length;
         userScore += 1;
         console.log(userScore);
         console.log("Answer is Correct!");
