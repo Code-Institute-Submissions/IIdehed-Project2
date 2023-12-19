@@ -10,7 +10,7 @@
 
 ---
 
-Horrer Quiz is a question quiz that let's you show your skills in knowlegde about horrer movies.
+Horrer Quiz is a game that let's you show your skills in knowlegde about horrer movies.
 You will have 10 questions to answer and you have 4 different options. Choose the right answer before 
 the time runs out!
 
@@ -18,7 +18,7 @@ the time runs out!
 
 ---
 
-## UX design
+## Design
 
 ---
 

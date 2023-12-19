@@ -9,14 +9,11 @@ const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
-
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
 startButton.addEventListener('click', () => {
-    console.log("start button clicked"); 
+    console.log("start button clicked");
     infoContainer.classList.add('activeInfo'); /*Show info section */
 });
-
-
 
 /* Show Quiz section if pressed. Added eventlistner.Listen to if button is clicked */
 continueBtn.addEventListener('click', () => {
@@ -28,8 +25,6 @@ continueBtn.addEventListener('click', () => {
     startTimer(10);
 });
 
-
-
 let questionCount = 0;
 let questionNumb = 1;
 let timeCount;
@@ -39,7 +34,6 @@ let userScore = 0;
 const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
-
 
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
@@ -54,7 +48,6 @@ restartQuiz.addEventListener('click', () => {
     clearInterval(timeCount);
     startTimer(timeValue);
     nextButton.style.display = "none";
-
 });
 
 /* If next button is pressed. Added eventlistener */
@@ -92,7 +85,6 @@ function getQuestions(index) {
     const answers = OptionsList.querySelectorAll(".answers");
     for (let i = 0; i < answers.length; i++) {
         answers[i].setAttribute("onclick", "answersSelected(this)");
-
     }
 }
 
@@ -104,12 +96,10 @@ answersSelected();
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {
     clearInterval(timeCount);
-
+    let UserAnswer = answer.textContent;
+    let correctAnswer = questions[questionCount].answer;
     let allOptions = OptionsList.children.length;
-
-    if (answer && answer.textContent) {
-        let UserAnswer = answer.textContent;
-        let correctAnswer = questions[questionCount].answer;
+    if (UserAnswer == correctAnswer) {
         userScore += 1;
         console.log(userScore);
         console.log("Answer is Correct!");
@@ -117,7 +107,6 @@ function answersSelected(answer) {
         answer.insertAdjacentHTML("beforeend", checkIcon);
     }
     else {
-        if (answer) {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong!");
         answer.insertAdjacentHTML("beforeend", crossIcon);
@@ -129,15 +118,12 @@ function answersSelected(answer) {
                 OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
             }
         }
-
     }
-
     /* Disabel all options if user pressed an answer */
     for (let i = 0; i < allOptions; i++) {
         OptionsList.children[i].classList.add("disabled");
     }
     nextButton.style.display = "block";
-
 }
 
 /* Show the result section */
@@ -150,17 +136,14 @@ function showResultContainer() {
         let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. Is that all you got?</span>';
         scoreText.innerHTML = scoreT;
     }
-
     else if (userScore >= 4 && userScore <= 6) {
         let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. You can do better!</span>';
         scoreText.innerHTML = scoreT;
     }
-
     else if (userScore >= 7) {
         let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. That is more like it!</span>';
         scoreText.innerHTML = scoreT;
     }
-
 }
 
 /* Start a timer and disabels if answer is pressed */
@@ -190,17 +173,9 @@ function startTimer(time) {
 
 }
 
-
-
-
-
-
-
 /* Shows with question you are on and how many there are*/
 function questionCounter(index) {
     const bottomCounter = quizContainer.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
 }
-}
-
