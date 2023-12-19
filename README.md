@@ -14,7 +14,7 @@ Horrer Quiz is a game that let's you show your skills in knowlegde about horrer 
 You will have 10 questions to answer and you have 4 different options. Choose the right answer before
 the time runs out!
 
-[Click here to go to live website]()
+[Click here to go to live website](https://idehed.github.io/Project2/)
 
 ---
 
@@ -207,28 +207,6 @@ Desktop
 
 ---
 
-## Credits
-
- I got some of my code from this youtube video. And some inspiration:
-
-- [Youtube.com](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=268s&ab_channel=CodingNepal)
-  
-I got my button from this website:
-
-- [cssbuttons.app](https://cssbuttons.app/)
-  
-Questions to the quiz I got from:
-
-- [play.howstuffworks.com](https://play.howstuffworks.com/quiz/the-ultimate-horror-movie-quiz)
-
-Background image was taken from:
-
-- [Unsplash](https://unsplash.com/)
-
-Want to thank my mentor Ronan Mc for help and guidance.
-
----
-
 ## Deployment
 
 ---
@@ -249,4 +227,24 @@ Want to thank my mentor Ronan Mc for help and guidance.
 
 6.Click View deployment to see the live site.
 
-The live link can be found here [live link]()
+The live link can be found here [live link](https://idehed.github.io/Project2/)
+
+## Credits
+
+ I got some of my code from this youtube video. And some inspiration:
+
+- [Youtube.com](https://www.youtube.com/watch?v=WUBhpSRS_fk&t=268s&ab_channel=CodingNepal)
+  
+I got my button from this website:
+
+- [cssbuttons.app](https://cssbuttons.app/)
+  
+Questions to the quiz I got from:
+
+- [play.howstuffworks.com](https://play.howstuffworks.com/quiz/the-ultimate-horror-movie-quiz)
+
+Background image was taken from:
+
+- [Unsplash](https://unsplash.com/)
+
+Want to thank my mentor Ronan Mc for help and guidance.
