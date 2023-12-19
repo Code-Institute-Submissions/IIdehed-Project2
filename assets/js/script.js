@@ -8,19 +8,19 @@ const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
 
 
-/* Show Level section if startbutton is pressed */
+/* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
 startButton.addEventListener('click', () => {
-    console.log("start button clicked");
-    infoContainer.classList.add('activeInfo');
+    console.log("start button clicked"); 
+    infoContainer.classList.add('activeInfo'); /*Show info section */
 });
 
 
 
-
+/* Show Quiz section if pressed. Added eventlistner.Listen to if button is clicked */
 continueBtn.addEventListener('click', () => {
     console.log("continue button clicked");
-    infoContainer.classList.remove('activeInfo');
-    quizContainer.classList.add('activeQuiz');
+    infoContainer.classList.remove('activeInfo'); /*Hide info section */
+    quizContainer.classList.add('activeQuiz'); /* Show quiz section */
     getQuestions(0);
     questionCounter(1);
     startTimer(10);
@@ -38,10 +38,12 @@ const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
+
+/* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
     console.log("restart button clicked");
-    quizContainer.classList.add("activeQuiz");
-    resultContainer.classList.remove("activeResult");
+    quizContainer.classList.add("activeQuiz"); /* Show the quiz section again */
+    resultContainer.classList.remove("activeResult"); /* Hide the result section*/
     let questionCount = 0;
     let questionNumb = 1;
     let timeValue = 10;
@@ -54,7 +56,7 @@ restartQuiz.addEventListener('click', () => {
 
 });
 
-/* If next button is pressed */
+/* If next button is pressed. Added eventlistener */
 nextButton.addEventListener('click', () => {
     console.log("nextbutton clicked");
     if (questionCount < questions.length - 1) {
@@ -74,7 +76,7 @@ nextButton.addEventListener('click', () => {
     }
 });
 
-/* Getting questions and options*/
+/* Getting questions and options from array ( questions.js ) */
 function getQuestions(index) {
     const questionText = document.querySelector(".question-text");
     let questionName = "<span>" + questions[index].numb + ". " + questions[index].question + "</span>";
@@ -94,7 +96,7 @@ function getQuestions(index) {
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>';
 
-
+/* This function updated the score and shows the answer in color */
 function answersSelected(answer) {
     clearInterval(timeCount);
     let UserAnswer = answer.textContent;
@@ -130,7 +132,7 @@ function answersSelected(answer) {
 
 }
 
-
+/* Show the result section */
 function showResultContainer() {
     infoContainer.classList.remove("activeInfo"); /* Hide the info Container */
     quizContainer.classList.remove("activeQuiz"); /* Hide the quiz Container */
@@ -153,6 +155,7 @@ function showResultContainer() {
 
 }
 
+/* Start a timer and disabels if answer is pressed */
 function startTimer(time) {
     timeCount = setInterval(timer, 1000);
     function timer() {
@@ -185,7 +188,7 @@ function startTimer(time) {
 
 
 
-
+/* Shows with question you are on and how many there are*/
 function questionCounter(index) {
     const bottomCounter = quizContainer.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
