@@ -97,7 +97,7 @@ I got my about me image from my phones photo library.
 
 ## Wireframes
 
-I used the website [Whimsical](https://whimsical.com/login) to make my wireframes. Super easy website to us!
+I used the website [Whimsical](https://whimsical.com/login) to make my wireframes.
 
 ---
 
@@ -105,13 +105,13 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 
 ---
 
-![untitled](https://github.com/Idehed/P1/assets/146822758/a0f434bf-7f85-497e-9cf5-4be360d17745)
+![Phone Wireframe](https://github.com/Idehed/Project2/assets/146822758/1a986b1f-7f86-467c-b91e-e37b94eb888e)
 
-### Tablets/computer view
+### Computer view
 
 ---
 
-![untitled (1)](https://github.com/Idehed/P1/assets/146822758/45944a38-03b3-4432-87d2-4376eec681cc)
+![Computer Wireframe)](https://github.com/Idehed/Project2/assets/146822758/b0ed37bd-779b-4727-96e0-4a2bd4e350e3)
 
 ---
 
@@ -126,8 +126,9 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 
 ## Automated testing
 
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) No errors found!
-- [W3C HTML Validator](https://validator.w3.org/#validate_by_input) No errors found!
+- W3C CSS Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/2ce7b5fa-390e-47af-9439-7a02877769c3)
+- W3C HTML Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/4ce161d0-0070-46e0-baa8-b84a287c7bd6)
+- JSHint JavaScript Validator: [Result](https://github.com/Idehed/Project2/assets/146822758/305edddc-5c50-4ba8-951a-a93be06f498c)
 
 ---
 
@@ -163,11 +164,7 @@ Contact me page desktops
 
 ## Bugs
 
-- When I deployed my website my favicon did not appear.
-  
-![fixed error](https://github.com/Idehed/P1/assets/146822758/1f2f533d-c893-44b8-b523-46d4b6151580)
-
-- I fixed this by removing the slash / in th href.
+- I got this errors when I ran the js code in g
 
 ---
 
