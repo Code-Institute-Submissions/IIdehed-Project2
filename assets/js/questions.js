@@ -60,13 +60,13 @@ const questions = [
 
     {
         numb:5,
-        question: "How does the (mostly) unseen monster from 'It Follows' decide who to target?",
-        answer:"Sexual partners",
+        question: "Which state is the house from “Amityville Horror” located?",
+        answer:"New York",
         options: [
-            'Sexual partners',
-            'Virgins', 
-            'Atheists', 
-            'Females Only', 
+            'Texas',
+            'Florida', 
+            'New York', 
+            'Ohio', 
         ]
     },
 
