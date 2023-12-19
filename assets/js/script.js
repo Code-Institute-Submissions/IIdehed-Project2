@@ -104,10 +104,12 @@ answersSelected();
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {
     clearInterval(timeCount);
+
+    let allOptions = OptionsList.children.length;
+
     if (answer && answer.textContent) {
         let UserAnswer = answer.textContent;
         let correctAnswer = questions[questionCount].answer;
-        let allOptions = OptionsList.children.length;
         userScore += 1;
         console.log(userScore);
         console.log("Answer is Correct!");
@@ -115,6 +117,7 @@ function answersSelected(answer) {
         answer.insertAdjacentHTML("beforeend", checkIcon);
     }
     else {
+        if (answer) {
         answer.classList.add("incorrect");
         console.log("Answer is Wrong!");
         answer.insertAdjacentHTML("beforeend", crossIcon);
@@ -199,3 +202,5 @@ function questionCounter(index) {
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
 }
+}
+
