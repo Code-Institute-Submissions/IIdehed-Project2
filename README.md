@@ -68,7 +68,7 @@ Returning Site Users
 
 ![Quiz game, after you pressed](https://github.com/Idehed/Project2/assets/146822758/146080fd-eaa8-464d-87f3-c2ca7be98cc2)
 
-- If the user pressed the wrong answer a red color appears and the right answer shows. To easy understand if I get right or wrong on that question.
+- If the user pressed the wrong answer a red color appears and the right answer shows. To easy understand if I get right or wrong on that question. And if you pressed the right answer only green color will appear.
 - Whenever an answer is pressed only then the next question button is shown.
 - If the timer runs out the user gets 0 points and the answers is disabled.
 
@@ -95,6 +95,27 @@ Returning Site Users
 ## Design Choices
 
 ---
+
+### Fonts
+
+I wanted to find a "scary" looking fonts for this project. I found this [Gloria-Hallelujah](https://fonts.google.com/specimen/Gloria+Hallelujah?query=gloria) that I really liked. I found this font aswell [Preahvihear](https://fonts.google.com/specimen/Preahvihear?query=preah) that also looked a little "scary" but more clean.I used those 2 fonts for the bigger text and [Lato](https://fonts.google.com/specimen/Lato?query=lato) for the smaller text.
+
+### Icons
+
+Icons I took were from [Font Awesome library](https://fontawesome.com/).
+
+### Colors
+
+- I wanted from the start have something with red and black colors. I think it goes well in hand with the horrer theme. I tried to keep the colors pretty simple and not to over the top. I will talk about what colors goes where under the pic, starting from left to right.
+
+![Colors](https://github.com/Idehed/Project2/assets/146822758/da9ccb59-e795-42d7-9ce9-e436e070ddad)
+
+- #ff0000 : this color is used for the Header, Welcome text, All the buttons text, all 3 different sections( Info, Quiz, End quiz) and footer text.
+- #131010 : this color is used for All the buttons background, how to play text and Icon in end section.
+- #3a3a3a : this color is used for box-shadow.
+- rgb(119, 25, 25) : this color is used for the time sec background.
+- #e30d0d : this color is used for the cross icon.
+- #05ca47 : this color is used for the check icon.
 
 ---
 
@@ -138,18 +159,17 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 - [W3C HTML Validation Service](https://validator.w3.org/ )
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ )
 - [JSHint JavaScript Validator](https://jshint.com/ )
-- 
 
 ## Testing
 
-- I tested this weste in 3 different browsers : Safari , Google Chrome, Firefox. All worked with no problem.
+- I tested this website in 3 different browsers : Safari , Google Chrome, Firefox. All worked with no problem.
 - Tested that the functions in the quiz works:
   
-1. PLay button is taken you to the info section.
+1. Play button is taken you to the info section.
 2. The continue button takes you to the quiz area.
 3. When you press right/wrong answer the right color light up. And is shown the right answer even if wrong answer is pressed.
 4. The next button takes you to the next question.
-5. Question counter show the right number.
+5. Question counter is shown the right number.
 6. Timer is working. Goes from 10sec to 0sec and stops when answer is pressed. Also resets when a new question is shown.
 7. When last question is answerd takes you to end of quiz section. Shows you how many right/wrong you had.
 8. Play again button takes you to the start of quiz. And resets the score.
@@ -180,7 +200,7 @@ Desktop
 
 - I got this errors when I deployed my website.
 - ![bug](https://github.com/Idehed/Greatskate-P1/assets/146822758/4b22dd8d-5b40-4a6d-b799-4192a2b76976)
-- I fixed it by using import/export declaration.
+- I fixed it by using import/export declaration to import my questions from another javascript file.
 - ![solution](https://github.com/Idehed/Greatskate-P1/assets/146822758/e215b659-c781-4f80-ae16-dbed137ec4e7)
 - ![solution](https://github.com/Idehed/Greatskate-P1/assets/146822758/07d97220-70bf-4d00-8886-59ba226e265e)
 - Found the solution from [stackoverflow.com](https://stackoverflow.com/)
@@ -205,6 +225,8 @@ Background image was taken from:
 
 - [Unsplash](https://unsplash.com/)
 
+Want to thank my mentor Ronan Mc for help and guidance.
+
 ---
 
 ## Deployment
@@ -227,13 +249,4 @@ Background image was taken from:
 
 6.Click View deployment to see the live site.
 
-The live link can be found here [live link](https://idehed.github.io/P1/)
-
----
-
-## Acknowledgements
-
----
-
-I would like to thank my mentor Ronan Mc for helping me through the whole process of making my first website!
-I had some moments when I really got stuck and you really helped through it.
+The live link can be found here [live link]()
