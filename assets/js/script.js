@@ -50,7 +50,6 @@ restartQuiz.addEventListener('click', () => {
 
 /* If next button is pressed. Added eventlistener */
 nextButton.addEventListener('click', () => {
-    console.log("nextbutton clicked");
     if (questionCount < questions.length - 1) {
         questionCount++;
         questionNumb++;

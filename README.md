@@ -144,13 +144,13 @@ I used the website [Whimsical](https://whimsical.com/login) to make my wireframe
 
 ### Lighthouse
 
-Home page Mobile
+Mobile
 
-![Home page](https://github.com/Idehed/P1/assets/146822758/e7baa670-7e44-4851-84ca-14a198f43b8c)
+![Mobile](https://github.com/Idehed/Project2/assets/146822758/d583da72-240e-4fc9-a419-3167c3feacdf)
 
-About me page Mobile
+Desktop
 
-![About me page](https://github.com/Idehed/P1/assets/146822758/9d7dfe46-3613-412c-8023-a3474e99b172)
+![Desktop]()
 
 Contact me page Mobile
 
@@ -174,7 +174,12 @@ Contact me page desktops
 
 ## Bugs
 
-- I got this errors when I ran
+- I got this errors when I deployed my website.
+- ![bug](https://github.com/Idehed/Greatskate-P1/assets/146822758/4b22dd8d-5b40-4a6d-b799-4192a2b76976)
+- I fixed it by using import/export declaration.
+- ![solution](https://github.com/Idehed/Greatskate-P1/assets/146822758/e215b659-c781-4f80-ae16-dbed137ec4e7)
+- ![solution](https://github.com/Idehed/Greatskate-P1/assets/146822758/07d97220-70bf-4d00-8886-59ba226e265e)
+- Found the solution from [stackoverflow.com](https://stackoverflow.com/)
 
 ---
 
