@@ -41,6 +41,7 @@ restartQuiz.addEventListener('click', () => {
     let questionCount = 0;
     let questionNumb = 1;
     let timeValue = 10;
+    let userScore = 0;
     getQuestions(questionCount);
     questionCounter(questionNumb);
     clearInterval(timeCount);
