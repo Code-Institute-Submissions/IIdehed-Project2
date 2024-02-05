@@ -240,17 +240,10 @@ ul {
     justify-content: space-between;
     flex-direction: column;
     pointer-events: none;
-    opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
 
 }
 
-.quiz-info-container.activeInfo {
-    z-index: 5;
-    pointer-events: auto;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
 
 nav {
     background-color: #ff0000;
@@ -282,7 +275,6 @@ nav {
     border-radius: 8px;
     margin-top: 20px;
     pointer-events: none;
-    opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
     box-shadow: 0 2px 2px #3a3a3a;
 
