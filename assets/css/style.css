@@ -65,6 +65,7 @@ main {
     color: #ff0000;
 
 }
+
 .text-center {
     text-align: center;
 }
@@ -72,6 +73,8 @@ main {
 /* Start button styles */
 
 .start-btn {
+    text-decoration: none;
+    display: inline-block;
     position: absolute;
     top: 100%;
     bottom: 0;
@@ -79,17 +82,9 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
     transform: translate(-50%, -50%);
-
-
-}
-
-.start-btn button {
     font-size: 20px;
     font-family: 'Preahvihear',
         sans-serif;
-}
-
-.start-btn button {
     padding: 0.6em 2em;
     border: none;
     outline: none;
@@ -101,7 +96,7 @@ main {
     border-radius: 10px;
 }
 
-.start-btn button:before {
+.start-btn:before {
     content: "";
     background: linear-gradient(45deg,
             #ff0000,
@@ -134,19 +129,19 @@ main {
     }
 }
 
-.start-btn button:active {
+.start-btn:active {
     color: #000;
 }
 
-.start-btn button:active:after {
+.start-btn:active:after {
     background: transparent;
 }
 
-.start-btn button:hover:before {
+.start-btn:hover:before {
     opacity: 1;
 }
 
-.start-btn button:after {
+.start-btn:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -665,7 +660,7 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
         width: 80%;
-        height:80%;
+        height: 80%;
     }
 
     .quiz-game-container .answers-options-list {
@@ -684,13 +679,13 @@ footer p {
 
     .question-text span {
         font-size: 12px;
-        
+
 
     }
 
     .quiz-game-container .timer {
         width: 80px;
-        height: 35px;  
+        height: 35px;
     }
 
     .quiz-game-container .time-header {
@@ -719,7 +714,7 @@ footer p {
     }
 
     .quiz-game-container .answers-options-list {
-        padding:1px 0;
+        padding: 1px 0;
     }
 
     .result-container .icon {
@@ -730,7 +725,7 @@ footer p {
 
     .result-container .score span {
         font-size: 10px;
-        display:block;
+        display: block;
     }
 
     .result-container .btn .play-again-btn {

@@ -2,7 +2,7 @@
 
 /* Get all the required elements */
 const infoContainer = document.querySelector(".quiz-info-container ");
-const startButton = document.querySelector(".start-btn button");
+const startButton = document.querySelector(".start-btn");
 const continueBtn = document.querySelector(".buttons .continuebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
