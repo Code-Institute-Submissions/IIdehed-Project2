@@ -155,6 +155,10 @@ main {
 
 /* How to play section */
 
+.playbtn {
+    margin-top: 20px;
+}
+
 .continuebtn {
     margin-top: 20px;
     font-family: 'Preahvihear',

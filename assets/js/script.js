@@ -3,7 +3,7 @@
 /* Get all the required elements */
 const infoContainer = document.querySelector(".quiz-info-container ");
 const startButton = document.querySelector(".start-btn");
-const continueBtn = document.querySelector(".buttons .continuebtn");
+const continueBtn = document.querySelector(".continuebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
@@ -38,10 +38,11 @@ const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 restartQuiz.addEventListener('click', () => {
     quizContainer.classList.add("activeQuiz"); /* Show the quiz section again */
     resultContainer.classList.remove("activeResult"); /* Hide the result section*/
+    let userScore = 0;
     let questionCount = 0;
     let questionNumb = 1;
     let timeValue = 10;
-    let userScore = 0;
+    showResultContainer(userScore)
     getQuestions(questionCount);
     questionCounter(questionNumb);
     clearInterval(timeCount);
