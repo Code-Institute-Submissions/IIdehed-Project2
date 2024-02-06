@@ -243,7 +243,6 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
 
 }
