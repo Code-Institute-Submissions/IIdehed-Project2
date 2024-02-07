@@ -2,8 +2,8 @@
 
 /* Get all the required elements */
 const infoContainer = document.querySelector(".quiz-info-container ");
-const startButton = document.querySelector(".start-btn");
-const continueBtn = document.querySelector(".continuebtn");
+const howToPlayButton = document.querySelector(".how-to-play-btn");
+const playGameBtn = document.querySelector(".playgamebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
@@ -11,12 +11,12 @@ import questions from './questions.js';
 
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
-startButton.addEventListener('click', () => {
+howToPlayButton.addEventListener('click', () => {
     infoContainer.classList.add('activeInfo'); /*Show info section */
 });
 
 /* Show Quiz section if pressed. Added eventlistner.Listen to if button is clicked */
-continueBtn.addEventListener('click', () => {
+playGameBtn.addEventListener('click', () => {
     infoContainer.classList.remove('activeInfo'); /*Hide info section */
     quizContainer.classList.add('activeQuiz'); /* Show quiz section */
     getQuestions(0);

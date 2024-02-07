@@ -72,7 +72,7 @@ main {
 
 /* Start button styles */
 
-.start-btn {
+.how-to-play-btn {
     text-decoration: none;
     display: inline-block;
     position: absolute;
@@ -96,7 +96,7 @@ main {
     border-radius: 10px;
 }
 
-.start-btn:before {
+.how-to-play-btn:before {
     content: "";
     background: linear-gradient(45deg,
             #ff0000,
@@ -129,19 +129,19 @@ main {
     }
 }
 
-.start-btn:active {
+.how-to-play-btn:active {
     color: #000;
 }
 
-.start-btn:active:after {
+.how-to-play-btn:active:after {
     background: transparent;
 }
 
-.start-btn:hover:before {
+.how-to-play-btn:hover:before {
     opacity: 1;
 }
 
-.start-btn:after {
+.how-to-play-btn:after {
     z-index: -1;
     content: "";
     position: absolute;
@@ -159,7 +159,7 @@ main {
     margin-top: 20px;
 }
 
-.continuebtn {
+.playgamebtn {
     margin-top: 20px;
     font-family: 'Preahvihear',
         sans-serif;
@@ -170,12 +170,12 @@ main {
     font-size: 17px;
     font-weight: 400;
     border-radius: 5px;
-    animation: continuebtnbounce 4s infinite;
+    animation: playgamebtnbounce 4s infinite;
     cursor: pointer;
 
 }
 
-@keyframes continuebtnbounce {
+@keyframes playgamebtnbounce {
 
     5%,
     50% {
