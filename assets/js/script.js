@@ -21,14 +21,14 @@ playGameBtn.addEventListener('click', () => {
     quizContainer.classList.add('activeQuiz'); /* Show quiz section */
     getQuestions(0);
     questionCounter(1);
-    startTimer(10);
+    startTimer(SECONDS_PER_QUESTION);
 });
 
 let questionCount = 0;
 let questionNumb = 1;
 let timeCount;
-let timeValue = 10;
 let userScore = 0;
+const SECONDS_PER_QUESTION = 10;
 
 const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
@@ -41,12 +41,12 @@ restartQuiz.addEventListener('click', () => {
     let userScore = 0;
     let questionCount = 0;
     let questionNumb = 1;
-    let timeValue = 10;
+    const SECONDS_PER_QUESTION = 10;
     showResultContainer(userScore)
     getQuestions(questionCount);
     questionCounter(questionNumb);
     clearInterval(timeCount);
-    startTimer(timeValue);
+    startTimer(SECONDS_PER_QUESTION);
     nextButton.style.display = "none";
 });
 
