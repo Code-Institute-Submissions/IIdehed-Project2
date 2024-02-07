@@ -9,6 +9,16 @@ const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 import questions from './questions.js';
 
+let questionCount = 0;
+let questionNumb = 1;
+let countdownInterval;
+let userScore = 0;
+const SECONDS_PER_QUESTION = 10;
+
+const nextButton = quizContainer.querySelector(".next-button");
+const resultContainer = document.querySelector(".result-container");
+const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
+
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
 howToPlayButton.addEventListener('click', () => {
@@ -24,16 +34,6 @@ playGameBtn.addEventListener('click', () => {
     startTimer(SECONDS_PER_QUESTION);
 });
 
-let questionCount = 0;
-let questionNumb = 1;
-let timeCount;
-let userScore = 0;
-const SECONDS_PER_QUESTION = 10;
-
-const nextButton = quizContainer.querySelector(".next-button");
-const resultContainer = document.querySelector(".result-container");
-const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
-
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
     quizContainer.classList.add("activeQuiz"); /* Show the quiz section again */
@@ -45,7 +45,7 @@ restartQuiz.addEventListener('click', () => {
     showResultContainer(userScore)
     getQuestions(questionCount);
     questionCounter(questionNumb);
-    clearInterval(timeCount);
+    clearInterval(countdownInterval);
     startTimer(SECONDS_PER_QUESTION);
     nextButton.style.display = "none";
 });
@@ -57,8 +57,8 @@ nextButton.addEventListener('click', () => {
         questionNumb++;
         getQuestions(questionCount);
         questionCounter(questionNumb);
-        clearInterval(timeCount);
-        startTimer(timeValue);
+        clearInterval(countdownInterval);
+        startTimer(SECONDS_PER_QUESTION);
         nextButton.style.display = "none";
     }
     else {
@@ -94,7 +94,7 @@ let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>
 
 /* This function updated the score and shows the answer in color */
 function answersSelected(answer) {
-    clearInterval(timeCount);
+    clearInterval(countdownInterval);
     let UserAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
     let allOptions = OptionsList.children.length;
@@ -144,13 +144,13 @@ function showResultContainer() {
 }
 
 /* Start a timer and disabels if answer is pressed */
-function startTimer(time) {
-    timeCount = setInterval(timer, 1000);
+function startTimer(secondsRemaining) {
+    countdownInterval = setInterval(timer, 1000);
     function timer() {
-        timeCounter.textContent = time;
-        time--;
-        if (time < 0) {
-            clearInterval(timeCount);
+        timeCounter.textContent = secondsRemaining;
+        secondsRemaining--;
+        if (secondsRemaining < 0) {
+            clearInterval(countdownInterval);
 
             let correctAnswer = questions[questionCount].answer;
             let allOptions = OptionsList.children.length;
