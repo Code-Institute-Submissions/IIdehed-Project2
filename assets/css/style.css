@@ -262,13 +262,6 @@ nav {
 
 /* Quiz Section */
 
-.quiz-game-container.activeQuiz {
-    z-index: 5;
-    pointer-events: auto;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
 .quiz-game-container {
     position: absolute;
     top: 50%;
