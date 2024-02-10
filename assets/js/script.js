@@ -8,6 +8,8 @@ const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
 
+const questionFooter = document.querySelector(".question-footer");
+
 /* Importing questions from questions.js */
 import questions from './questions.js';
 
@@ -18,7 +20,7 @@ let countdownInterval;
 let userScore = 0;
 const SECONDS_PER_QUESTION = 10;
 
-const nextButton = quizContainer.querySelector(".next-button");
+const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
@@ -32,11 +34,12 @@ howToPlayButton.addEventListener('click', () => {
 });
 
 /* Starts the quiz. Getting questions and resetting both the counter and the timer */
-function startQuiz() {
+playGameBtn.addEventListener('click', () => {
+    quizContainer.style.display = "block";
     getQuestions(0);
     questionCounter(1);
     startTimer(SECONDS_PER_QUESTION);
-};
+});
 
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
@@ -175,9 +178,7 @@ function startTimer(secondsRemaining) {
 
 /* Shows with question you are on and how many there are*/
 function questionCounter(index) {
-    const bottomCounter = quizContainer.querySelector(".total-questions");
+    const bottomCounter = questionFooter.querySelector(".total-questions");
     let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
     bottomCounter.innerHTML = totalQuestionText;
 }
-
-startQuiz();
