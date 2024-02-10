@@ -22,10 +22,13 @@ const nextButton = quizContainer.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
+infoContainer.style.display = "none";
+quizContainer.style.display = "none";
+
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
 howToPlayButton.addEventListener('click', () => {
-    infoContainer.classList.add('activeInfo'); /*Show info section */
+    infoContainer.style.display = 'block'; /*Show info section */
 });
 
 /* Starts the quiz. Getting questions and resetting both the counter and the timer */
