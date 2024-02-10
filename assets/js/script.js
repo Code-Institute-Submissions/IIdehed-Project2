@@ -152,28 +152,48 @@ function showResultContainer() {
 
 /* Start a timer and disabels if answer is pressed */
 function startTimer(secondsRemaining) {
-    countdownInterval = setInterval(timer, 1000);
-    function timer() {
-        timeCounter.textContent = secondsRemaining;
-        secondsRemaining--;
-        if (secondsRemaining < 0) {
-            clearInterval(countdownInterval);
+    countdownInterval = setInterval(() => {
+        updateTimerDisplay(secondsRemaining);
+        if (secondsRemaining <= 0) {
+            handleTimeOut();
+        }
+        else {
+            secondsRemaining--;
+        }
+    }, 1000);
+}
 
-            let correctAnswer = questions[questionCount].answer;
-            let allOptions = OptionsList.children.length;
+function updateTimerDisplay(secondsRemaining) {
+    timeCounter.textContent = secondsRemaining;
+}
 
-            for (let i = 0; i < allOptions; i++) {
-                if (OptionsList.children[i].textContent == correctAnswer) {
-                    OptionsList.children[i].setAttribute("class", "answers correct");
-                    OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
-                }
-            }
-            for (let i = 0; i < allOptions; i++) {
-                OptionsList.children[i].classList.add("disabled");
-            }
-            nextButton.style.display = "block";
+function handleTimeOut() {
+    clearInterval(countdownInterval);
+    markCorrectAnswer();
+    disableAllOptions();
+    showNextButton();
+}
+
+function markCorrectAnswer() {
+    const correctAnswer = questions[questionCount].answer;
+    const allOptions = OptionsList.children.length;
+    for (let i = 0; i < allOptions; i++) {
+        if (OptionsList.children[i].textContent === correctAnswer) {
+            OptionsList.children[i].setAttribute("class", "answers correct");
+            OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
         }
     }
+}
+
+function disableAllOptions() {
+    const allOptions = OptionsList.children.length;
+    for (let i = 0; i < allOptions; i++) {
+        OptionsList.children[i].classList.add("disabled");
+    }
+}
+
+function showNextButton() {
+    nextButton.style.display = "block";
 }
 
 /* Shows with question you are on and how many there are*/
