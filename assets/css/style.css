@@ -490,7 +490,7 @@ nav {
 
 /* Result Section */
 
-.result-container.activeResult {
+.result-container .activeResult {
     z-index: 5;
     pointer-events: auto;
     opacity: 1;
