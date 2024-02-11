@@ -43,7 +43,6 @@ body {
 
 main {
     min-height: 100vh;
-    background-image: url("../images/stefano-pollio-ZC0EbdLC8G0-unsplash\ \(1\).webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -270,7 +269,6 @@ nav {
     background: #ff0000;
     border-radius: 8px;
     margin-top: 20px;
-    pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
     box-shadow: 0 2px 2px #3a3a3a;
 
@@ -490,13 +488,6 @@ nav {
 
 /* Result Section */
 
-.result-container .activeResult {
-    z-index: 5;
-    pointer-events: auto;
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
 .result-container {
     position: absolute;
     top: 50%;
@@ -511,8 +502,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    pointer-events: none;
-    opacity: 0;
     transform: translate(-50%, -50%) scale(0.9);
     box-shadow: 0 2px 2px #3a3a3a;
     border: 1px solid rgb(59, 59, 59);

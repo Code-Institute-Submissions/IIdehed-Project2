@@ -1,6 +1,7 @@
 /* jshint esversion: 6 */
 
 /* Get all the required elements */
+const welcomeMessage = document.querySelector(".start-welcome ");
 const infoContainer = document.querySelector(".quiz-info-container ");
 const howToPlayButton = document.querySelector(".how-to-play-btn");
 const playGameBtn = document.querySelector(".playgamebtn");
@@ -26,6 +27,7 @@ const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
 infoContainer.style.display = "none";
 quizContainer.style.display = "none";
+resultContainer.style.display = "none";
 
 
 /* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
@@ -35,6 +37,8 @@ howToPlayButton.addEventListener('click', () => {
 
 /* Starts the quiz. Getting questions and resetting both the counter and the timer */
 playGameBtn.addEventListener('click', () => {
+    welcomeMessage.style.display = "none";
+    infoContainer.style.display = "none";
     quizContainer.style.display = "block";
     getQuestions(0);
     questionCounter(1);
@@ -43,8 +47,10 @@ playGameBtn.addEventListener('click', () => {
 
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
-    quizContainer.classList.add("activeQuiz"); /* Show the quiz section again */
-    resultContainer.classList.remove("activeResult"); /* Hide the result section*/
+    resultContainer.style.display = "none"; /* Hide the result section*/
+    welcomeMessage.style.display = "none"; /* Hide the welcome message */
+    infoContainer.style.display = "none"; /* Hide the info section */
+    quizContainer.style.display = "block"; /* Show the quiz section again */
     let userScore = 0;
     let questionCount = 0;
     let questionNumb = 1;
@@ -132,9 +138,9 @@ function answersSelected(answer) {
 
 /* Show the result section */
 function showResultContainer() {
-    infoContainer.classList.remove("activeInfo"); /* Hide the info Container */
-    quizContainer.classList.remove("activeQuiz"); /* Hide the quiz Container */
-    resultContainer.classList.add("activeResult");/* Show the result Container */
+    infoContainer.style.display = "none"; /* Hide the info Container */
+    quizContainer.style.display = "none"; /* Hide the quiz Container */
+    resultContainer.style.display = "block";/* Show the result Container */
     const scoreText = resultContainer.querySelector(".score");
     if (userScore < 4) {
         let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. Is that all you got?</span>';
