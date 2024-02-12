@@ -25,21 +25,25 @@ const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
-infoContainer.style.display = "none";
-quizContainer.style.display = "none";
-resultContainer.style.display = "none";
+/* When the page loads , hide the infosection, quizsection and resultsection */
+function loadfirstPage() {
+    infoContainer.style.display = "none";
+    quizContainer.style.display = "none";
+    resultContainer.style.display = "none";
+}
 
+loadfirstPage();
 
-/* Show Info section if is pressed. Added eventlistner.Listen to if button is clicked*/
+/* Show Info section if is pressed. Added eventlistnerListener*/
 howToPlayButton.addEventListener('click', () => {
     infoContainer.style.display = 'block'; /*Show info section */
+    welcomeMessage.style.display = "none"; /* Hide the welcome message */
 });
 
-/* Starts the quiz. Getting questions and resetting both the counter and the timer */
+/* Starts the quiz. Getting questions and setting count to 1 and start the timer */
 playGameBtn.addEventListener('click', () => {
-    welcomeMessage.style.display = "none";
-    infoContainer.style.display = "none";
-    quizContainer.style.display = "block";
+    infoContainer.style.display = "none"; /* Hide info section */
+    quizContainer.style.display = "block"; /* Show quiz section */
     getQuestions(0);
     questionCounter(1);
     startTimer(SECONDS_PER_QUESTION);
@@ -51,11 +55,10 @@ restartQuiz.addEventListener('click', () => {
     welcomeMessage.style.display = "none"; /* Hide the welcome message */
     infoContainer.style.display = "none"; /* Hide the info section */
     quizContainer.style.display = "block"; /* Show the quiz section again */
-    let userScore = 0;
-    let questionCount = 0;
-    let questionNumb = 1;
+    userScore = 0;
+    questionCount = 0;
+    questionNumb = 1;
     const SECONDS_PER_QUESTION = 10;
-    showResultContainer(userScore);
     getQuestions(questionCount);
     questionCounter(questionNumb);
     clearInterval(countdownInterval);
