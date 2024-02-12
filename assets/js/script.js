@@ -49,23 +49,6 @@ playGameBtn.addEventListener('click', () => {
     startTimer(SECONDS_PER_QUESTION);
 });
 
-/* Restart the quiz when pressed. Added eventlistener */
-restartQuiz.addEventListener('click', () => {
-    resultContainer.style.display = "none"; /* Hide the result section*/
-    welcomeMessage.style.display = "none"; /* Hide the welcome message */
-    infoContainer.style.display = "none"; /* Hide the info section */
-    quizContainer.style.display = "block"; /* Show the quiz section again */
-    userScore = 0;
-    questionCount = 0;
-    questionNumb = 1;
-    const SECONDS_PER_QUESTION = 10;
-    getQuestions(questionCount);
-    questionCounter(questionNumb);
-    clearInterval(countdownInterval);
-    startTimer(SECONDS_PER_QUESTION);
-    nextButton.style.display = "none";
-});
-
 /* If next button is pressed. Added eventlistener */
 nextButton.addEventListener('click', () => {
     if (questionCount < questions.length - 1) {
@@ -138,6 +121,23 @@ function answersSelected(answer) {
     }
     nextButton.style.display = "block";
 }
+
+/* Restart the quiz when pressed. Added eventlistener */
+restartQuiz.addEventListener('click', () => {
+    resultContainer.style.display = "none"; /* Hide the result section*/
+    welcomeMessage.style.display = "none"; /* Hide the welcome message */
+    infoContainer.style.display = "none"; /* Hide the info section */
+    quizContainer.style.display = "block"; /* Show the quiz section again */
+    userScore = 0;
+    questionCount = 0;
+    questionNumb = 1;
+    const SECONDS_PER_QUESTION = 10;
+    getQuestions(questionCount);
+    questionCounter(questionNumb);
+    clearInterval(countdownInterval);
+    startTimer(SECONDS_PER_QUESTION);
+    nextButton.style.display = "none";
+});
 
 /* Show the result section */
 function showResultContainer() {
