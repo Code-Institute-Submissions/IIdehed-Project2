@@ -16,12 +16,22 @@ const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
+const playerNameButton = document.querySelector("#player-name-button");
+const inputName = document.querySelector("#name");
+
 /* Create global variabels */
 let questionCount = 0;
 let questionNumb = 1;
 let countdownInterval;
 let userScore = 0;
 const SECONDS_PER_QUESTION = 10;
+
+const players = [];
+// This array will later contain players with their score. Here is an example
+// {
+//     name: "Bob",
+//     score: 8,
+// }
 
 /* When the page loads , hide the infosection, quizsection and resultsection */
 function loadfirstPage() {
@@ -45,6 +55,11 @@ playGameBtn.addEventListener('click', () => {
     getQuestions(0);
     questionCounter(1);
     startTimer(SECONDS_PER_QUESTION);
+});
+
+// Runs on subbmitting player name
+playerNameButton.addEventListener('click', () => {
+    registerScore(inputName.value);
 });
 
 /* Updates the score, updates which question you are on, resetting the timer 
@@ -173,6 +188,27 @@ function showResultContainer() {
     else if (userScore >= 7) {
         scoreText.innerHTML = `You scored ${userScore} out of ${questions.length}! That is more like it!`;
     }
+}
+
+function registerScore(name) {
+    const playerIndex = players.findIndex(player => player.name === name);
+
+    if (playerIndex !== -1) { // check if player exists
+        players[playerIndex].score = userScore;
+        alert('Your score is totaled to ' + players[playerIndex].score);
+    } else {
+        const player = { name, score: userScore };
+        players.push(player);
+        alert("Thank you " + name);
+    }
+
+
+    players.forEach(player => {
+
+        const listItem = document.createElement('li');
+        listItem.textContent = `${player.name} - ${player.score} points`;
+        document.querySelector('#score-list').appendChild(listItem);
+    });
 }
 
 /* Start a timer and disabels if answer is pressed */
