@@ -1,3 +1,6 @@
+/* Importing questions from questions.js */
+import questions from './questions.js';
+
 /* jshint esversion: 6 */
 
 /* Get all the required elements */
@@ -8,11 +11,10 @@ const playGameBtn = document.querySelector(".playgamebtn");
 const quizContainer = document.querySelector(".quiz-game-container");
 const OptionsList = document.querySelector(".answers-options-list");
 const timeCounter = quizContainer.querySelector(".timer .timer-sec");
-
 const questionFooter = document.querySelector(".question-footer");
-
-/* Importing questions from questions.js */
-import questions from './questions.js';
+const nextButton = questionFooter.querySelector(".next-button");
+const resultContainer = document.querySelector(".result-container");
+const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
 /* Create global variabels */
 let questionCount = 0;
@@ -20,10 +22,6 @@ let questionNumb = 1;
 let countdownInterval;
 let userScore = 0;
 const SECONDS_PER_QUESTION = 10;
-
-const nextButton = questionFooter.querySelector(".next-button");
-const resultContainer = document.querySelector(".result-container");
-const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 
 /* When the page loads , hide the infosection, quizsection and resultsection */
 function loadfirstPage() {
@@ -222,6 +220,6 @@ function showNextButton() {
 /* Shows with question you are on and how many there are*/
 function questionCounter(index) {
     const bottomCounter = questionFooter.querySelector(".total-questions");
-    let totalQuestionText = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Questions</span>';
+    let totalQuestionText = `Question ${index} of ${questions.length}`;
     bottomCounter.innerHTML = totalQuestionText;
 }
