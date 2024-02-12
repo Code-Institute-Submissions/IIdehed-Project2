@@ -103,7 +103,19 @@ function getQuestions(index) {
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fa-solid fa-xmark"></i></div>';
 
-/* This function updated the score and shows the answer in color */
+/* Adding Icon "checkIcon" and the color green */
+function addIconAndGreenC(answer) {
+    answer.classList.add("correct");
+    answer.insertAdjacentHTML("beforeend", checkIcon);
+}
+
+/* Adding Icon "crossIcon" and the color red */
+function addIconAndRedC(answer) {
+    answer.classList.add("incorrect");
+    answer.insertAdjacentHTML("beforeend", crossIcon);
+}
+
+/* This function updated the score if right answer and shows the answer in colors */
 function answersSelected(answer) {
     clearInterval(countdownInterval);
     let UserAnswer = answer.textContent;
@@ -111,13 +123,10 @@ function answersSelected(answer) {
     let allOptions = OptionsList.children.length;
     if (UserAnswer == correctAnswer) {
         userScore += 1;
-        console.log(userScore);
-        answer.classList.add("correct");
-        answer.insertAdjacentHTML("beforeend", checkIcon);
+        addIconAndGreenC(answer);
     }
     else {
-        answer.classList.add("incorrect");
-        answer.insertAdjacentHTML("beforeend", crossIcon);
+        addIconAndRedC(answer);
 
         /* If incorred answer is pressed show the right answer */
         for (let i = 0; i < allOptions; i++) {
