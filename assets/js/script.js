@@ -49,16 +49,22 @@ playGameBtn.addEventListener('click', () => {
     startTimer(SECONDS_PER_QUESTION);
 });
 
+/* Updates the score, updates which question you are on, resetting the timer 
+and getting a new question */
+function nextQuestion() {
+    questionCount++;
+    questionNumb++;
+    getQuestions(questionCount);
+    questionCounter(questionNumb);
+    clearInterval(countdownInterval);
+    startTimer(SECONDS_PER_QUESTION);
+    nextButton.style.display = "none";
+}
+
 /* If next button is pressed. Added eventlistener */
 nextButton.addEventListener('click', () => {
     if (questionCount < questions.length - 1) {
-        questionCount++;
-        questionNumb++;
-        getQuestions(questionCount);
-        questionCounter(questionNumb);
-        clearInterval(countdownInterval);
-        startTimer(SECONDS_PER_QUESTION);
-        nextButton.style.display = "none";
+        nextQuestion()
     }
     else {
         console.log("Questions Completed!");
