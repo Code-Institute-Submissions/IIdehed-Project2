@@ -129,12 +129,7 @@ function answersSelected(answer) {
         addIconAndRedC(answer);
 
         /* If incorred answer is pressed show the right answer */
-        for (let i = 0; i < allOptions; i++) {
-            if (OptionsList.children[i].textContent == correctAnswer) {
-                OptionsList.children[i].setAttribute("class", "answers correct");
-                OptionsList.children[i].insertAdjacentHTML("beforeend", checkIcon);
-            }
-        }
+        markCorrectAnswer();
     }
     /* Disabel all options if user pressed an answer */
     for (let i = 0; i < allOptions; i++) {
@@ -192,7 +187,7 @@ function startTimer(secondsRemaining) {
         }
     }, 1000);
 }
-
+ /* Updates the timer to 10 seconds */
 function updateTimerDisplay(secondsRemaining) {
     timeCounter.textContent = secondsRemaining;
 }
@@ -204,6 +199,7 @@ function handleTimeOut() {
     showNextButton();
 }
 
+/* Show the right answer */
 function markCorrectAnswer() {
     const correctAnswer = questions[questionCount].answer;
     const allOptions = OptionsList.children.length;
@@ -214,7 +210,7 @@ function markCorrectAnswer() {
         }
     }
 }
-
+/* Disabel all the options when an answer is pressed */
 function disableAllOptions() {
     const allOptions = OptionsList.children.length;
     for (let i = 0; i < allOptions; i++) {
@@ -222,6 +218,7 @@ function disableAllOptions() {
     }
 }
 
+/* Show the nextbutton */
 function showNextButton() {
     nextButton.style.display = "block";
 }
