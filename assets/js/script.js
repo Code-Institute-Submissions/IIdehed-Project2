@@ -135,13 +135,9 @@ function answersSelected(answer) {
     }
     nextButton.style.display = "block";
 }
-
-/* Restart the quiz when pressed. Added eventlistener */
-restartQuiz.addEventListener('click', () => {
-    resultContainer.style.display = "none"; /* Hide the result section*/
-    welcomeMessage.style.display = "none"; /* Hide the welcome message */
-    infoContainer.style.display = "none"; /* Hide the info section */
-    quizContainer.style.display = "block"; /* Show the quiz section again */
+/* Resetting the quiz (setting score = 0, getting the 1 question, setting timer = 10 , 
+   questioncounter = 0 )*/
+function reRunQuiz() {
     userScore = 0;
     questionCount = 0;
     questionNumb = 1;
@@ -151,6 +147,16 @@ restartQuiz.addEventListener('click', () => {
     clearInterval(countdownInterval);
     startTimer(SECONDS_PER_QUESTION);
     nextButton.style.display = "none";
+}
+
+/* Restart the quiz when pressed. Added eventlistener */
+restartQuiz.addEventListener('click', () => {
+    resultContainer.style.display = "none"; /* Hide the result section*/
+    welcomeMessage.style.display = "none"; /* Hide the welcome message */
+    infoContainer.style.display = "none"; /* Hide the info section */
+    quizContainer.style.display = "block"; /* Show the quiz section again */
+
+    reRunQuiz();
 });
 
 /* Show the result section */
