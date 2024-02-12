@@ -152,8 +152,6 @@ function reRunQuiz() {
 /* Restart the quiz when pressed. Added eventlistener */
 restartQuiz.addEventListener('click', () => {
     resultContainer.style.display = "none"; /* Hide the result section*/
-    welcomeMessage.style.display = "none"; /* Hide the welcome message */
-    infoContainer.style.display = "none"; /* Hide the info section */
     quizContainer.style.display = "block"; /* Show the quiz section again */
 
     reRunQuiz();
@@ -161,21 +159,17 @@ restartQuiz.addEventListener('click', () => {
 
 /* Show the result section */
 function showResultContainer() {
-    infoContainer.style.display = "none"; /* Hide the info Container */
     quizContainer.style.display = "none"; /* Hide the quiz Container */
     resultContainer.style.display = "block";/* Show the result Container */
     const scoreText = resultContainer.querySelector(".score");
     if (userScore < 4) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. Is that all you got?</span>';
-        scoreText.innerHTML = scoreT;
+        scoreText.innerHTML = `You scored ${userScore} out of ${questions.length}! Is that all you got?`;
     }
     else if (userScore >= 4 && userScore <= 6) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. You can do better!</span>';
-        scoreText.innerHTML = scoreT;
+        scoreText.innerHTML = `You scored ${userScore} out of ${questions.length}! You can do better!`;
     }
     else if (userScore >= 7) {
-        let scoreT = '<span>You got<p>' + userScore + '</p>out of<p>' + questions.length + '</p>. That is more like it!</span>';
-        scoreText.innerHTML = scoreT;
+        scoreText.innerHTML = `You scored ${userScore} out of ${questions.length}! That is more like it!`;
     }
 }
 
