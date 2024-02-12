@@ -64,34 +64,42 @@ function nextQuestion() {
 /* If next button is pressed. Added eventlistener */
 nextButton.addEventListener('click', () => {
     if (questionCount < questions.length - 1) {
-        nextQuestion()
+        nextQuestion();
     }
     else {
-        console.log("Questions Completed!");
-        questionCount = 0;
-        questionNumb = 1;
         showResultContainer();
     }
 });
 
-/* Getting questions and options from array ( questions.js ) */
-function getQuestions(index) {
+/* Getting the question title from questions.js */
+function setTitle(index) {
     const questionText = document.querySelector(".question-text");
-    let questionName = "<span>" + questions[index].numb + ". " + questions[index].question + "</span>";
-    let OptionsText = `
-    <div class="answers">${questions[index].options[0]}<span></span></div>
-    <div class="answers">${questions[index].options[1]}<span></span></div>
-    <div class="answers">${questions[index].options[2]}<span></span></div>
-    <div class="answers">${questions[index].options[3]}<span></span></div>
- `;
+    const questionName = questions[index].question;
     questionText.innerHTML = questionName;
-    OptionsList.innerHTML = OptionsText;
+}
+
+/* Getting the 4 different options from questions.js */
+function setOptions(index) {
+    const question = questions[index];
+    const optionsText = question.options.map(option => `<div class="answers">${option}</div>`).join("\n");
+    OptionsList.innerHTML = optionsText;
+}
+
+/* Checks which answer the user clicks */
+function handelOptionSelection() {
     const answers = OptionsList.querySelectorAll(".answers");
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", function () {
             answersSelected(this);
         });
     }
+}
+
+/* Getting questions and options from array ( questions.js ) */
+function getQuestions(index) {
+    setTitle(index);
+    setOptions(index);
+    handelOptionSelection();
 }
 
 let checkIcon = '<div class="icon check"><i class="fa-solid fa-check-double"></i></div>';
