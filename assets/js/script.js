@@ -16,6 +16,7 @@ const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 const scoreContainer = document.querySelector('.score-container');
+const highScoreBtn = document.querySelector('.highscore-btn')
 
 const playerNameButton = document.querySelector("#player-name-button");
 const inputName = document.querySelector("#name");
@@ -230,6 +231,12 @@ function registerScore(name) {
     localStorage.setItem('players', JSON.stringify(players));
     populateScoreList();
 }
+
+highScoreBtn.addEventListener('click', () => {
+    scoreContainer.style.display = 'block';
+    populateScoreList();
+})
+
 
 /* Start a timer and disabels if answer is pressed */
 function startTimer(secondsRemaining) {
