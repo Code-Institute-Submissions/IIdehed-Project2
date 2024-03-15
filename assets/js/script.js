@@ -15,6 +15,7 @@ const questionFooter = document.querySelector(".question-footer");
 const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
+const scoreContainer = document.querySelector('.score-container');
 
 const playerNameButton = document.querySelector("#player-name-button");
 const inputName = document.querySelector("#name");
@@ -26,7 +27,7 @@ let countdownInterval;
 let userScore = 0;
 const SECONDS_PER_QUESTION = 10;
 
-const players = [];
+let players = JSON.parse(localStorage.getItem('players')) || [];
 // This array will later contain players with their score. Here is an example
 // {
 //     name: "Bob",
@@ -38,6 +39,8 @@ function loadfirstPage() {
     infoContainer.style.display = "none";
     quizContainer.style.display = "none";
     resultContainer.style.display = "none";
+    scoreContainer.style.display = 'none';
+
 }
 
 loadfirstPage();
@@ -190,25 +193,42 @@ function showResultContainer() {
     }
 }
 
+function populateScoreList() {
+    const scoreList = document.querySelector('#score-list');
+    const scoreContainer = document.querySelector('.score-container');
+    // Clear the scoreList first
+    scoreList.innerHTML = '';
+    players.forEach(player => {
+        const listItem = document.createElement('li');
+        scoreContainer.style.display = 'block';
+        resultContainer.style.display = "none";
+        listItem.innerHTML = `${player.name} : ${player.score}`;
+        scoreList.append(listItem);
+    });
+}
+
 function registerScore(name) {
+    name = name.trim();
+    if (name === "" || name === null) { // Check for empty string or null
+        alert("Must put a valid name in");
+        return; // Exit the function
+    }
+
     const playerIndex = players.findIndex(player => player.name === name);
 
     if (playerIndex !== -1) { // check if player exists
         players[playerIndex].score = userScore;
         alert('Your score is totaled to ' + players[playerIndex].score);
-    } else {
+    }
+    else{
         const player = { name, score: userScore };
         players.push(player);
         alert("Thank you " + name);
     }
 
 
-    players.forEach(player => {
-
-        const listItem = document.createElement('li');
-        listItem.textContent = `${player.name} - ${player.score} points`;
-        document.querySelector('#score-list').appendChild(listItem);
-    });
+    localStorage.setItem('players', JSON.stringify(players));
+    populateScoreList();
 }
 
 /* Start a timer and disabels if answer is pressed */
@@ -223,7 +243,7 @@ function startTimer(secondsRemaining) {
         }
     }, 1000);
 }
- /* Updates the timer to 10 seconds */
+/* Updates the timer to 10 seconds */
 function updateTimerDisplay(secondsRemaining) {
     timeCounter.textContent = secondsRemaining;
 }
