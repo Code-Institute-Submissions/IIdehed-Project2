@@ -229,7 +229,8 @@ function registerScore(name) {
 
 
     localStorage.setItem('players', JSON.stringify(players));
-    populateScoreList();
+    // clearing the name input after pressing save score
+    inputName.value = '';
 }
 
 highScoreBtn.addEventListener('click', () => {
