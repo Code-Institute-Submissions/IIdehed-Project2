@@ -199,7 +199,8 @@ function populateScoreList() {
     const scoreContainer = document.querySelector('.score-container');
     // Clear the scoreList first
     scoreList.innerHTML = '';
-    players.forEach(player => {
+    const sortedPlayers = players.sort((a, b) => b.score - a.score);
+    sortedPlayers.forEach(player => {
         const listItem = document.createElement('li');
         scoreContainer.style.display = 'block';
         resultContainer.style.display = "none";
@@ -219,12 +220,12 @@ function registerScore(name) {
 
     if (playerIndex !== -1) { // check if player exists
         players[playerIndex].score = userScore;
-        alert('Your score is totaled to ' + players[playerIndex].score);
+        alert('Your highscore has been updated to ' + players[playerIndex].score);
     }
     else{
         const player = { name, score: userScore };
         players.push(player);
-        alert("Thank you " + name);
+        alert("Score saved for player " + name );
     }
 
 
