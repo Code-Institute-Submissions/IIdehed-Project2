@@ -602,6 +602,20 @@ nav {
 
 }
 
+#player-name-button {
+    margin-top: 20px;
+    font-family: 'Preahvihear',
+        sans-serif;
+    background-color: #131010;
+    color: #ff0000;
+    padding: 0 13px;
+    height: 30px;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* Footer Styles */
 
 
