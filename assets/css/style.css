@@ -80,7 +80,7 @@ main {
     left: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     font-size: 20px;
     font-family: 'Preahvihear',
         sans-serif;
@@ -784,7 +784,7 @@ footer p {
     }
 
     .result-container .icon {
-        font-size: 100px;
+        font-size: 70px;
         margin-bottom: 8px;
         color: #131010;
     }
