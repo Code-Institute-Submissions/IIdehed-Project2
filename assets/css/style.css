@@ -710,7 +710,7 @@ footer p {
 
     .quiz-info-container {
         width: 80%;
-        height: 80%;
+        
     }
 
     #header {
@@ -729,7 +729,6 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
         width: 80%;
-        height: 80%;
     }
 
     .quiz-game-container .answers-options-list {
@@ -746,10 +745,8 @@ footer p {
         height: 80%;
     }
 
-    .question-text span {
+    .quiz-game-container .question-text {
         font-size: 12px;
-
-
     }
 
     .quiz-game-container .timer {
