@@ -216,19 +216,11 @@ function registerScore(name) {
         return; // Exit the function
     }
 
-    const playerIndex = players.findIndex(player => player.name === name);
-
-    if (playerIndex !== -1) { // check if player exists
-        players[playerIndex].score = userScore;
-        alert('Your highscore has been updated to ' + players[playerIndex].score);
-    }
-    else{
-        const player = { name, score: userScore };
-        players.push(player);
-        alert("Score saved for player " + name );
-    }
-
-
+    const player = { name, score: userScore };
+    players.push(player);
+    alert("Score saved for player " + name );
+    
+    
     localStorage.setItem('players', JSON.stringify(players));
     // clearing the name input after pressing save score
     inputName.value = '';
