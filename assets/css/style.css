@@ -229,10 +229,6 @@ ul {
         cursive;
 }
 
-#score-list {
-    margin-left: 30px;
-}
-
 .quiz-info-container {
     position: absolute;
     min-height: 100px;
@@ -583,12 +579,16 @@ nav {
     margin-top: 10px;
 }
 
+#score-list {
+    margin-left: 5px;
+}
+
 .score-container .btn-score-home {
     justify-content: center;
 }
 
 .btn-score-home {
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .btn-score-home .homebtn {
@@ -654,6 +654,8 @@ footer p {
 
     .how-to-play-btn {
         margin-top: 20px;
+        padding: 0.6em 0.4em;
+        font-size: 15px;
     }
 
     .quiz-info-container {
@@ -684,13 +686,7 @@ footer p {
     }
 
     .result-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
-        width: 80%;
-        height: 80%;
+       width: 80%;
     }
 
     .quiz-game-container .question-text {
