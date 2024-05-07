@@ -1,7 +1,7 @@
+/* jshint esversion: 6 */
+
 /* Importing questions from questions.js */
 import questions from './questions.js';
-
-/* jshint esversion: 6 */
 
 /* Get all the required elements */
 const welcomeMessage = document.querySelector(".start-welcome ");
@@ -16,7 +16,7 @@ const nextButton = questionFooter.querySelector(".next-button");
 const resultContainer = document.querySelector(".result-container");
 const restartQuiz = resultContainer.querySelector(".btn .play-again-btn");
 const scoreContainer = document.querySelector('.score-container');
-const highScoreBtn = document.querySelector('.highscore-btn')
+const highScoreBtn = document.querySelector('.highscore-btn');
 
 const playerNameButton = document.querySelector("#player-name-button");
 const inputName = document.querySelector("#name");
@@ -229,7 +229,7 @@ function registerScore(name) {
 highScoreBtn.addEventListener('click', () => {
     scoreContainer.style.display = 'block';
     populateScoreList();
-})
+});
 
 
 /* Start a timer and disabels if answer is pressed */
